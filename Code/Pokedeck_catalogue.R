@@ -6,7 +6,7 @@ easypackages::libraries(packages)
 
 local_store <- '~/Repositories/Pokedeck/Data'
 
-raw_data <- read_csv(paste0(local_store, '/TCGplayerCardList.csv'))
+collection_data <- read_csv(paste0(local_store, '/TCGplayerCardList.csv'))
 
 # TODO find overall pokemon data, then left join the hierarchy (evoles to/evolves from etc)
 
@@ -21,15 +21,65 @@ raw_data <- read_csv(paste0(local_store, '/TCGplayerCardList.csv'))
 # For now lets use name, but later we might query evolvesFrom to look through out basic and stage one pokemon to see what could be good to get.
 
 attribute_x <- 'name'
+
 #TODO multiple names is proving tricky
-query_x <- gsub(' ', '%20', raw_data$Name[1])
+query_x <- gsub(' ', '%20', collection_data$Name[1])
 
-# query_x <- 'Grimer'
+# at the moment two names do not work, i cannot get a query string build that does not contain the escape for the double quote needed to appease the API.
+# url_json <- paste0("https://api.pokemontcg.io/v2/cards?q=", attribute_x, ":'", query_x, "'&select=subtypes,types,name,evolvesTo,images")
+# 
+# raw_card_data <- httr::GET(url_json) %>% 
+#   httr::content()
 
-url_json <- paste0('https://api.pokemontcg.io/v2/cards?q=', attribute_x, ':"', query_x, '"&select=subtypes,types,name,evolvesTo,images')
 
-raw_card_data <- httr::GET(url_json) %>% 
-  httr::content()
+# So for now, we will have to extract using the first name only (which will return a whole load of pokemon we dont need, but at least it should contain the one pokemon we do need)
 
-url_json
+for(i in 1:10){
+
+if(i == 1){ 
+  Pokemon_df <- data.frame()}
+
+query_x <- word(collection_data$Name[i])
+
+query_string <- paste0("https://api.pokemontcg.io/v2/cards?q=", attribute_x, ":", query_x, "&select=subtypes,types,name,evolvesTo,images")
+
+# Response of the query 
+# GET(query_string)
+
+raw_data <- GET(query_string) %>% 
+  content()
+
+# Issue - there are many results for most queries
+
+# Issue - some results have more columns than others (making a straight up matrix approach unhelpful)
+processed_df <- raw_data$data
+# df <- data.frame(matrix(unlist(processed_df), nrow=length(processed_df), byrow=TRUE))#
+
+# as.data.frame(do.call(cbind, processed_df)) %>% View() still problematic when there are some results with multiple values
+
+for(j in 1:length(processed_df)) {
+
+if(j == 1){
+  dummy_df <- data.frame()
+}
+  
+  processed_df_x <-  processed_df[j] %>%  
+  unlist() %>% 
+  t() %>% 
+  as.data.frame()
+
+dummy_df <- dummy_df %>% 
+  bind_rows(processed_df_x)
+
+}
+
+Pokemon_df <- Pokemon_df %>% 
+  bind_rows(dummy_df)
+
+}
+
+Pokemon_df_final <- Pokemon_df %>% 
+  mutate(subtypes = ifelse(is.na(subtypes), subtypes1, subtypes)) %>% 
+  select(Name = name, Level = subtypes, Type = types, EvolvesTo = evolvesTo) %>% 
+  unique()
 
