@@ -6,7 +6,12 @@ easypackages::libraries(packages)
 
 local_store <- '~/Repositories/Pokedeck/Data'
 
-collection_data <- read_csv(paste0(local_store, '/TCGplayerCardList.csv'))
+collection_data <- read_csv(paste0(local_store, '/TCGplayerCardList.csv')) %>% 
+  filter(!Name %in% c("Basic Darkness Energy", "Basic Fire Energy", "Basic Grass Energy", "Basic Lightning Energy", "Basic Metal Energy", "Basic Psychic Energy", "Basic Water Energy")) # We have taken out the energy cards as we are interested in Pokemon only (not items/tools/energy/stadium)
+
+# Later on we discover that Eevee can evolve into lots of different pokemon, and that makes it tricky for us and we probably wont worry about all the options for eevee so I'm going to remove the issue here.
+collection_data <- collection_data %>% 
+  filter(!str_detect(Name, 'Eevee'))
 
 # TODO find overall pokemon data, then left join the hierarchy (evoles to/evolves from etc)
 
@@ -34,12 +39,13 @@ query_x <- gsub(' ', '%20', collection_data$Name[1])
 
 # So for now, we will have to extract using the first name only (which will return a whole load of pokemon we dont need, but at least it should contain the one pokemon we do need)
 
-for(i in 1:10){
+for(i in 1:nrow(collection_data)){
 
 if(i == 1){ 
-  Pokemon_df <- data.frame()}
+  Pokemon_df <- data.frame()
+  }
 
-query_x <- word(collection_data$Name[i])
+query_x <- word(collection_data$`Simple Name`[i])
 
 query_string <- paste0("https://api.pokemontcg.io/v2/cards?q=", attribute_x, ":", query_x, "&select=subtypes,types,name,evolvesTo,images")
 
@@ -81,5 +87,14 @@ Pokemon_df <- Pokemon_df %>%
 Pokemon_df_final <- Pokemon_df %>% 
   mutate(subtypes = ifelse(is.na(subtypes), subtypes1, subtypes)) %>% 
   select(Name = name, Level = subtypes, Type = types, EvolvesTo = evolvesTo) %>% 
-  unique()
+  unique() %>% 
+  filter(Name %in% collection_data$Name)
+
+# This is a pretty good start. Though some basic pokemon appear twice, once with an EvolvesTo value and once without
+# TODO identify duplicates and keep only the one which has a value for EvolvesTo.
+
+# TODO left join Pokemon_df_final to collection to identify what each Basic and Stage 1 pokemon evolves to if it does.
+# TODO Identify Stage 1 Pokemon (and Stage 2 Pokemon) in the EvolvesTo field to see what they evolved from.
+# TODO Create a 'do we have evolved to' 'do we have evolved from'
+
 
