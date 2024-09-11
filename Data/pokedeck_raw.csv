@@ -1,0 +1,44 @@
+Name,Type,Stage,Quantity,Evolves_from,Evolves_to
+Slugma,Fire,Basic,7,,Magcargo
+Magcargo,Fire,Stage 1,5,Slugma,
+Reshiram,Fire,Basic,1,,
+Larvesta,Fire,Basic,1,,
+Litwick,Fire,Basic,1,,Lampent
+Lampent,Fire,Stage 1,2,Litwick,Chandelure
+Chandelure,Fire,Stage 2,1,Lampent,
+Heatmor,Fire,Basic,3,,
+Darumaka,Fire,Basic,1,,Darmanitan
+Darmanitan,Fire,Stage 1,2,Darumaka,
+Magby,Fire,Basic,1,,
+Magmar,Fire,Stage 1,1,,
+Ponyta,Fire,Basic,1,,Rapidash
+Rapidash,Fire,Stage 1,3,Ponyta,
+Pansear,Fire,Basic,2,,Simisear
+Simisear,Fire,Stage 1,2,Pansear,
+Litten,Fire,Basic,1,,Torracat
+Torracat,Fire,Stage 1,2,Litten,
+Sizzlipede,Fire,Basic,4,,Centiskorch
+Centiskorch,Fire,Stage 1,2,Sizzlipede,
+Houndour,Fire,Basic,1,,Houndoom
+Houndoom,Fire,Stage 1,2,Houndour,
+Victini,Fire,Basic,1,,
+Charmander,Fire,Basic,3,,Charmeleon
+Charmeleon,Fire,Stage 1,3,Charmdander,Charizard
+Charizard,Fire,Stage 2,2,Charmeleon,
+Growlithe,Fire,Basic,3,,
+Torkoal,Fire,Basic,1,,
+Iron Moth,Fire,Basic,1,,
+Charcadet,Fire,Basic,4,,Armarouge
+Armarouge,Fire,Stage 1,1,Charcadet,
+Litleo,Fire,Basic,2,,Pyroar
+Pyroar,Fire,Stage 1,1,Litleo,
+Fletchinder,Fire,Stage 1,1,Fletchling,Talonflame
+Talonflame,Fire,Stage 2,1,Fletchinder,
+Numel,Fire,Basic,3,,Camerupt
+Camerupt,Fire,Stage 1,3,Numel,
+Salandit,Fire,Basic,1,,Salazzle
+Salazzle,Fire,Stage 1,1,Salandit,
+Fuecoco,Fire,Basic,5,,Crocalor
+Crocalor,Fire,Stage 1,4,Fuecoco,
+Vulpix,Fire,Basic,3,,Ninetales
+Ninetales,Fire,Stage 1,1,Vulpix,
