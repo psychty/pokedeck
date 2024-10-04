@@ -10,11 +10,17 @@ I am hoping to use R to read in the collection, and some open source database of
 
 I may also look at the types of pokemon we have, such as fire or water, and whether we need to try to increase the amount of particular types to build specific decks.
 
-//TODO call my parents and find out if I have any old pokemon cards stored in the loft of our family home.
+~~//TODO call my parents and find out if I have any old pokemon cards stored in the loft of our family home.~~
 
-# TCGPlayer app
+Boo, the RT collection of cards is no more
 
-I used the TCGPlayer mobile app to scan the existing cards and export them to csv.
+# ~~TCGPlayer app~~
+
+~~I used the TCGPlayer mobile app to scan the existing cards and export them to csv.~~
+
+# Good old manual data entry
+
+I tried using TCGPlayer app but scanning each card individually ended up taking longer than i thought, drained the phone battery, and getting the precise angle and distance away to capture each card was not consistent across the whole collection. In the end, we felt like arranging the cards by type, and then grouping them by name and evolution was the simplest way to process our cards. 
 
 # PokemonTCG.io
 
@@ -25,3 +31,11 @@ Third-party application rate limits depend on your API key. By default, requests
 If you are not use an API key, the rate limit is 1,000 requests per day, and a maxium of 30 per minute.
 
 We can query all sorts of parameters but most simply our query is looking for the name, we dont need to make it query the specific card ID or set ID as we're just looking to add the cards we need, not to build sets as collectors (aint nobody got time(money) for that).
+
+# Next steps
+
+What are we trying to achieve? 
+
+I think we ultimately want to know what cards we need, and what cards we have an abundance of.
+
+Maybe we could put this into a lightweight website hosted somewhere like netlify that we could access on the fly when we come across some cards in the wild.

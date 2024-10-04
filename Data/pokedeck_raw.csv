@@ -1,44 +1,411 @@
 Name,Type,Stage,Quantity,Evolves_from,Evolves_to
-Slugma,Fire,Basic,7,,Magcargo
-Magcargo,Fire,Stage 1,5,Slugma,
-Reshiram,Fire,Basic,1,,
-Larvesta,Fire,Basic,1,,
-Litwick,Fire,Basic,1,,Lampent
-Lampent,Fire,Stage 1,2,Litwick,Chandelure
+Clefable,Fairy,Stage 1,1,Clefairy,
+Clefairy,Fairy,Basic,1,,
+Cottonee,Fairy,Basic,1,,
+Dedenne,Fairy,Basic,1,,
+Flabébé,Fairy,Basic,1,,Floette
+Floette,Fairy,Stage 1,1,Flabebe,
+Granbull,Fairy,Stage 1,1,Snubbul,
+Jigglypuff,Fairy,Basic,1,,
+Jigglypuff,Fairy,Basic,1,,
+Marill,Fairy,Basic,1,,
+Ralts,Fairy,Basic,1,,
+Snubbull,Fairy,Basic,1,,Granbull
+Spritzee,Fairy,Basic,1,,
+Armarouge,Fire,Stage 1,1,Charcadet,
+Camerupt,Fire,Stage 1,3,Numel,
+Centiskorch,Fire,Stage 1,3,Sizzlipede,
 Chandelure,Fire,Stage 2,1,Lampent,
-Heatmor,Fire,Basic,3,,
-Darumaka,Fire,Basic,1,,Darmanitan
-Darmanitan,Fire,Stage 1,2,Darumaka,
-Magby,Fire,Basic,1,,
-Magmar,Fire,Stage 1,1,,
-Ponyta,Fire,Basic,1,,Rapidash
-Rapidash,Fire,Stage 1,3,Ponyta,
-Pansear,Fire,Basic,2,,Simisear
-Simisear,Fire,Stage 1,2,Pansear,
-Litten,Fire,Basic,1,,Torracat
-Torracat,Fire,Stage 1,2,Litten,
-Sizzlipede,Fire,Basic,4,,Centiskorch
-Centiskorch,Fire,Stage 1,2,Sizzlipede,
-Houndour,Fire,Basic,1,,Houndoom
-Houndoom,Fire,Stage 1,2,Houndour,
-Victini,Fire,Basic,1,,
+Charcadet,Fire,Basic,4,,Armarouge
+Charizard,Fire,Stage 2,2,Charmeleon,
 Charmander,Fire,Basic,3,,Charmeleon
 Charmeleon,Fire,Stage 1,3,Charmdander,Charizard
-Charizard,Fire,Stage 2,2,Charmeleon,
-Growlithe,Fire,Basic,3,,
-Torkoal,Fire,Basic,1,,
-Iron Moth,Fire,Basic,1,,
-Charcadet,Fire,Basic,4,,Armarouge
-Armarouge,Fire,Stage 1,1,Charcadet,
-Litleo,Fire,Basic,2,,Pyroar
-Pyroar,Fire,Stage 1,1,Litleo,
-Fletchinder,Fire,Stage 1,1,Fletchling,Talonflame
-Talonflame,Fire,Stage 2,1,Fletchinder,
-Numel,Fire,Basic,3,,Camerupt
-Camerupt,Fire,Stage 1,3,Numel,
-Salandit,Fire,Basic,1,,Salazzle
-Salazzle,Fire,Stage 1,1,Salandit,
-Fuecoco,Fire,Basic,5,,Crocalor
 Crocalor,Fire,Stage 1,4,Fuecoco,
-Vulpix,Fire,Basic,3,,Ninetales
+Darmanitan,Fire,Stage 1,2,Darumaka,
+Darumaka,Fire,Basic,2,,Darmanitan
+Fletchinder,Fire,Stage 1,1,Fletchling,Talonflame
+Fuecoco,Fire,Basic,5,,Crocalor
+Growlithe,Fire,Basic,4,,
+Heatmor,Fire,Basic,3,,
+Houndoom,Fire,Stage 1,2,Houndour,
+Houndour,Fire,Basic,2,,Houndoom
+Incineroar,Fire,Stage 2,1,Torracat,
+Infernape,Fire,Stage 2,1,Monferno,
+Iron Moth,Fire,Basic,1,,
+Lampent,Fire,Stage 1,4,Litwick,Chandelure
+Larvesta,Fire,Basic,3,,
+Litleo,Fire,Basic,2,,Pyroar
+Litten,Fire,Basic,2,,Torracat
+Litwick,Fire,Basic,3,,Lampent
+Magby,Fire,Basic,1,,
+Magcargo,Fire,Stage 1,5,Slugma,
+Magmar,Fire,Stage 1,2,,
+Monferno,Fire,Stage 1,1,Chimchar,Infernape
 Ninetales,Fire,Stage 1,1,Vulpix,
+Numel,Fire,Basic,4,,Camerupt
+Oricorio,Fire,Basic,1,,
+Pansear,Fire,Basic,2,,Simisear
+Ponyta,Fire,Basic,2,,Rapidash
+Pyroar,Fire,Stage 1,1,Litleo,
+Rapidash,Fire,Stage 1,3,Ponyta,
+Reshiram,Fire,Basic,1,,
+Salandit,Fire,Basic,2,,Salazzle
+Salazzle,Fire,Stage 1,1,Salandit,
+Scorbunny,Fire,Basic,1,,
+Simisear,Fire,Stage 1,2,Pansear,
+Sizzlipede,Fire,Basic,4,,Centiskorch
+Slugma,Fire,Basic,7,,Magcargo
+Talonflame,Fire,Stage 2,1,Fletchinder,
+Torkoal,Fire,Basic,4,,
+Torracat,Fire,Stage 1,2,Litten,Incineroar
+Turtonator,Fire,Basic,1,,
+Victini,Fire,Basic,2,,
+Volcanion,Fire,Basic,1,,
+Vulpix,Fire,Basic,3,,Ninetales
+Chimchar,Fire,Basic,1,,Monferno
+Cottonee,Grass,Basic,1,,Whimsicott
+Whimsicott,Grass,Stage 1,1,Cottonee,
+Petilil,Grass,Basic,2,,
+Durant,Grass,Basic,1,,
+Illumise,Grass,Basic,1,,
+Cacnea,Grass,Basic,1,,Cacturne
+Cacturne,Grass,Stage 1,1,Cacnea,
+Maractus,Grass,Basic,1,,
+Toedscool,Grass,Basic,4,,Toedscruel
+Toedscruel,Grass,Stage 1,3,Toedscool,
+Nymble,Grass,Basic,6,,
+Grookey,Grass,Basic,1,,Thwackey
+Thwackey,Grass,Stage 1,3,Grookey,
+Tarountula,Grass,Basic,4,,
+Paras,Grass,Basic,3,,Parasect
+Parasect,Grass,Stage 1,2,Paras,
+Sawsbuck,Grass,Stage 1,2,Deerling,
+Bramblin,Grass,Basic,2,,Brambleghast
+Brambleghast,Grass,Stage 1,1,Bramblin,
+Applin,Grass,Basic,1,,
+Scyther,Grass,Basic,4,,
+Pineco,Grass,Basic,3,,
+Caterpie,Grass,Basic,2,,Metapod
+Metapod,Grass,Stage 1,1,Caterpie,
+Dwebble,Grass,Basic,2,,Crustle
+Crustle,Grass,Stage 2,1,Dwebble,
+Combee,Grass,Basic,4,,Vespiquen
+Vespiquen,Grass,Stage 1,4,Combee,
+Tropius,Grass,Basic,5,,
+Heracross,Grass,Basic,1,,
+Pansage,Grass,Basic,3,,
+Bulbasaur,Grass,Basic,2,,Ivysaur
+Ivysaur,Grass,Stage 1,2,Bulbasaur,Venusaur
+Venusaur,Grass,Stage 2,1,Ivysaur,
+Phantump,Grass,Basic,4,,Trevenant
+Trevenant,Grass,Stage 1,4,Phantump,
+Kricketune,Grass,Stage 1,1,Kricketot,
+Cherubi,Grass,Basic,1,,
+Foongus,Grass,Basic,2,,
+Shroomish,Grass,Basic,1,,
+Weedle,Grass,Basic,2,,
+Lurantis,Grass,Stage 1,1,Fomantis,
+Grubbin,Grass,Basic,2,,
+Wo-Chien,Grass,Basic,1,,
+Tangela,Grass,Basic,5,,
+Bounsweet,Grass,Basic,7,,Steenee
+Steenee,Grass,Stage 1,3,Bounsweet,Tsareena
+Celebi,Grass,Basic,1,,
+Snover,Grass,Basic,3,,
+Shuckle,Grass,Basic,1,,
+Lombre,Grass,Stage 1,1,,
+Poltchageist,Grass,Basic,1,,
+Exeggcute,Grass,Basic,1,,
+Exeggcutor,Grass,Stage 1,2,,
+Surskit,Grass,Basic,2,,Masquerain
+Masquerain,Grass,Stage 1,2,Surskit,
+Oddish,Grass,Basic,5,,Gloom
+Gloom,Grass,Stage 1,1,Oddish,Bellossom
+Bellossom,Grass,Stage 2,5,Gloom,
+Vileplume,Grass,Stage 2,2,Gloom,
+Capsakid,Grass,Basic,1,,Scovillain
+Scovillain,Grass,Stage 1,4,Capsakid,
+Shelmet,Grass,Basic,1,,
+Ledyba,Grass,Basic,1,,Ledian
+Ledian,Grass,Stage 1,1,Ledyba,
+Larvesta,Grass,Basic,1,,
+Yanma,Grass,Basic,1,,Yanmega
+Yanmega,Grass,Stage 1,4,Yanma,
+Dhelmise,Grass,Basic,1,,
+Virizion,Grass,Basic,1,,
+Smoliv,Grass,Basic,2,,Dolliv
+Dolliv,Grass,Stage 1,1,Smoliv,
+Venonat,Grass,Basic,3,,Venomoth
+Venomoth,Grass,Stage 1,1,Venonat,
+Orbeetle,Grass,Stage 2,1,Dottler,
+Seedot,Grass,Basic,4,,Nuzleaf
+Nuzleaf,Grass,Stage 1,2,Seedot,
+Dartrix,Grass,Stage 1,1,Rowlet,
+Roserade,Grass,Stage 1,1,Roselia,
+Hoppip,Grass,Basic,2,,Skiploom
+Skiploom,Grass,Stage 1,1,Hoppip,
+Gossifleur,Grass,Basic,1,,
+Rellor,Grass,Basic,1,,
+Spinarak,Grass,Basic,4,,
+Ariados,Grass,Stage 1,1,,
+Sprigatito,Grass,Basic,1,,Floragato
+Floragato,Grass,Stage 1,1,Sprigatito,
+Carnivine,Grass,Basic,1,,
+Turtwig,Grass,Basic,1,,Grotle
+Grotle,Grass,Stage 1,1,Turtwig,Torterra
+Torterra,Grass,Stage 2,1,Grotle,
+Fomantis,Grass,Basic,3,,Lurantis
+Tsareena,Grass,Stage 2,1,Steenee,
+Bellsprout,Grass,Basic,1,,
+Sewaddle,Grass,Basic,2,,
+Wimpod,Grass,Basic,1,,
+Morelull,Grass,Basic,1,,
+Wurmple,Grass,Basic,1,,Cascoon
+Cascoon,Grass,Basic,1,Wurmple,
+Shaymin,Grass,Basic,1,,
+Scatterbug,Grass,Basic,1,,Spewpa
+Spewpa,Grass,Stage 1,1,Scatterbug,Vivillon
+Vivillon,Grass,Stage 2,1,Spewpa,
+Deerling,Grass,Basic,1,,Sawsbuck
+Dewpider,Grass,Basic,1,,
+Sunflora,Grass,Stage 1,1,Sunkern,
+Electrike,Lightning,Basic,3,,
+Tadbulb,Lightning,Basic,6,,Bellibolt
+Bellibolt,Lightning,Stage 1,2,Tadbulb,
+Rotom,Lightning,Basic,3,,
+Toxel,Lightning,Basic,3,,Toxtricity
+Toxtricity,Lightning,Stage 1,4,Toxel,
+Voltorb,Lightning,Basic,3,,Electrode
+Electrode,Lightning,Stage 1,3,Voltorb,
+Charjabug,Lightning,Stage 1,1,Grubbin,Vikavolt
+Vikavolt,Lightning,Stage 2,1,Charjabug,
+Alolan Geodude,Lightning,Basic,2,,
+Oricorio,Lightning,Basic,3,,
+Zekrom,Lightning,Basic,1,,
+Pikachu,Lightning,Basic,10,,Raichu
+Raichu,Lightning,Stage 1,2,Pikachu,
+Pincurchin,Lightning,Basic,2,,
+Elekid,Lightning,Basic,1,,
+Tynamo,Lightning,Basic,1,,Eelektrik
+Eelektrik,Lightning,Stage 1,1,Tynamo,Eelektross
+Eelektross,Lightning,Stage 2,1,Eelektross,
+Magnemite,Lightning,Basic,7,,Magneton
+Magneton,Lightning,Stage 1,3,Magnemite,Magnezone
+Magnezone,Lightning,Stage 2,1,Magneton,
+Shinx,Lightning,Basic,8,,Luxio
+Luxio,Lightning,Stage 1,3,Shinx,
+Stunfisk,Lightning,Basic,2,,
+Pachirisu,Lightning,Basic,3,,
+Morpeko,Lightning,Basic,3,,
+Chinchou,Lightning,Basic,4,,Lanturn
+Lanturn,Lightning,Stage 1,3,Chinchou,
+Emolga,Lightning,Basic,2,,
+Blitzle,Lightning,Basic,7,,
+Ampharos,Lightning,Stage 2,1,Flaaffy,
+Pawmi,Lightning,Basic,3,,Pawmo
+Pawmo,Lightning,Stage 1,1,Pawmi,
+Mareep,Lightning,Basic,3,,
+Wattrel,Lightning,Basic,4,,Kilowattrel
+Kilowattrel,Lightning,Stage 1,1,Wattrel,
+Yamper,Lightning,Basic,2,,
+Helioptile,Lightning,Basic,3,,
+Joltik,Lightning,Basic,1,,Galvantula
+Galvantula,Lightning,Stage 1,1,Joltik,
+Togedemaru,Lightning,Basic,2,,
+Plusle,Lightning,Basic,1,,
+Regieleki,Lightning,Basic,1,,
+Electabuzz,Lightning,Basic,4,,Electivire
+Electivire,Lightning,Stage 1,5,Electabuzz,
+Meditite,Psychic,Basic,1,,
+Inkay,Psychic,Basic,1,,
+Sigilyph,Psychic,Basic,1,,
+Gimmighoul,Psychic,Basic,1,,
+Slowpoke,Psychic,Basic,3,,
+Mr. Mime,Psychic,Basic,1,,
+Gastly,Psychic,Basic,2,,Haunter
+Haunter,Psychic,Stage 1,1,Gastly,
+Cutiefly,Psychic,Basic,1,,
+Togekiss,Psychic,Stage 2,2,,
+Baltoy,Psychic,Basic,2,,
+Fidough,Psychic,Basic,1,,
+Drifloon,Psychic,Basic,2,,Drifblim
+Drifblim,Psychic,Stage 1,1,Drifloon,
+Arbok,Psychic,Stage 1,1,,
+Ekans,Psychic,Basic,1,,
+Gothorita,Psychic,Stage 1,3,,
+Espurr,Psychic,Basic,7,,
+Spectrier,Psychic,Basic,1,,
+Flittle,Psychic,Basic,1,,
+Espathra,Psychic,Stage 1,2,,
+Solrock,Psychic,Basic,1,,
+Ralts,Psychic,Basic,10,,Kirlia
+Kirlia,Psychic,Stage 1,4,Ralts,Gardevoir
+Gardevoir,Psychic,Stage 2,1,Kirlia,
+Abra,Psychic,Basic,3,,Kadabra
+Kadabra,Psychic,Stage 1,1,Abra,Alakazam
+Alakazam,Psychic,Stage 2,1,Kadabra,
+Marill,Psychic,Basic,1,,
+Azumarill,Psychic,Stage 1,1,,
+Yamask,Psychic,Basic,1,,
+Scream Tail,Psychic,Basic,2,,
+Cosmog,Psychic,Basic,1,,Cosmoem
+Cosmoem,Psychic,Stage 1,1,Cosmog,
+Clefairy,Psychic,Basic,5,,
+Clefable,Psychic,Stage 1,1,,
+Swirlix,Psychic,Basic,1,,Slurpuff
+Slurpuff,Psychic,Stage 1,4,,
+Greavard,Psychic,Basic,2,,
+Houndstone,Psychic,Stage 1,3,,
+Girafarig,Psychic,Basic,1,,Farigiraf
+Farigiraf,Psychic,Stage 1,1,Girafarig,
+Granbull,Psychic,Stage 1,1,Snubbull,
+Cleffa,Psychic,Basic,1,,
+Flutter Mane,Psychic,Basic,2,,
+Jigglypuff,Psychic,Basic,3,,
+Iron Valiant,Psychic,Basic,1,,
+Chimecho,Psychic,Basic,5,,
+Spoink,Psychic,Basic,3,,Grumpig
+Grumpig,Psychic,Stage 1,4,Spoink,
+Espeon,Psychic,Stage 1,2,,
+Sinistea,Psychic,Basic,2,,Polteageist
+Polteageist,Psychic,Stage 1,1,Sinistea,
+Natu,Psychic,Basic,3,,Xatu
+Xatu,Psychic,Stage 1,1,Natu,
+Whimsicott,Psychic,Stage 1,1,Cottonee,
+Pumpkaboo,Psychic,Basic,1,,
+Gourgeist,Psychic,Stage 1,1,Pumpkaboo,
+Misdreavus,Psychic,Basic,1,,Mismagius
+Mismagius,Psychic,Stage 1,2,Misdreavus,
+Lunatone,Psychic,Basic,3,,
+Zubat,Psychic,Basic,1,,Golbat
+Golbat,Psychic,Stage 1,1,Zubat,
+Indeedee,Psychic,Basic,3,,
+Deoxys,Psychic,Basic,1,,
+Woobat,Psychic,Basic,2,,Swoobat
+Swoobat,Psychic,Stage 1,1,Woobat,
+Mawile,Psychic,Basic,2,,
+Dhelmise,Psychic,Basic,1,,
+Floette,Psychic,Stage 1,1,,Florges
+Florges,Psychic,Stage 2,1,Floette,
+Drowzee,Psychic,Basic,9,,Hypno
+Hypno,Psychic,Stage 1,1,Drowzee,
+Solosis,Psychic,Basic,8,,
+Galarian Corsola,Psychic,Basic,1,,
+Jynx,Psychic,Basic,5,,
+Elgyem,Psychic,Basic,6,,Beheeyem
+Beheeyem,Psychic,Stage 1,6,Elgyem,
+Bronzor,Psychic,Basic,1,,Bronzong
+Bronzong,Psychic,Stage 1,1,Bronzor,
+Dedenne,Psychic,Basic,2,,
+Mimikyu,Psychic,Basic,2,,
+Wobbuffet,Psychic,Basic,1,,
+Tinkatuff,Psychic,Stage 1,1,,
+Shuppet,Psychic,Basic,3,,
+Dreepy,Psychic,Basic,3,,Drakloak
+Drakloak,Psychic,Stage 1,3,Dreepy,
+Alomomola,Water,Basic,1,,
+Araquanid,Water,Stage 1,3,Dewpider,
+Arctibax,Water,Stage 1,1,Frigibax,
+Avalugg,Water,Stage 1,1,Bergmite,
+Azumarill,Water,Stage 1,2,Marill,
+Barboach,Water,Basic,1,,
+Barraskewda,Water,Stage 1,1,Arrokuda,
+Beartic,Water,Stage 1,1,Cubchoo,
+Bergmite,Water,Basic,2,,Avalugg
+Brionne,Water,Stage 1,1,Popplio,
+Bruxish,Water,Basic,2,,
+Buizel,Water,Basic,2,,Floatzel
+Carvanha,Water,Basic,2,,
+Castform Rainy Form,Water,Basic,1,,
+Cetitan,Water,Stage 1,4,Cetoddle,
+Cetoddle,Water,Basic,2,,Cetitan
+Chewtle,Water,Basic,3,,Drednaw
+Clauncher,Water,Basic,2,,
+Cloyster,Water,Stage 1,4,Shellder,
+Corphish,Water,Basic,3,,
+Crabominable,Water,Stage 1,1,Crabcrawler,
+Cramorant,Water,Basic,1,,
+Croconaw,Water,Stage 1,1,Totodile,Feraligatr
+Cryogonal,Water,Basic,2,,
+Cubchoo,Water,Basic,1,,Beartic
+Delibird,Water,Basic,1,,
+Dewgong,Water,Stage 1,1,Seel,
+Dewott,Water,Stage 1,1,Oshawott,
+Drednaw,Water,Stage 1,2,Chewtle,
+Ducklett,Water,Basic,1,,
+Eiscue,Water,Basic,4,,
+Feebas,Water,Basic,6,,
+Feraligatr,Water,Stage 2,1,Croconaw,
+Floatzel,Water,Stage 1,5,Buizel,
+Frigibax,Water,Basic,2,,Arctibax
+Frillish,Water,Basic,1,,
+Froakie,Water,Basic,2,,Frogadier
+Frogadier,Water,Stage 1,2,Froakie,
+Galarian Darumaka,Water,Basic,1,,
+Galarian Mr Mime,Water,Basic,1,,
+Glaceon,Water,Stage 1,1,Eevee,
+Glalie,Water,Stage 1,2,Snorunt,
+Goldeen,Water,Basic,1,,
+Horsea,Water,Basic,3,,
+Huntail,Water,Stage 1,1,Clamperl,
+Iron Bundle,Water,Basic,1,,
+Jellicent,Water,Stage 1,1,Frillish,
+Keldeo,Water,Basic,2,,
+Lapras,Water,Basic,2,,
+Lotad,Water,Basic,1,,
+Lumineon,Water,Stage 1,2,Finneon,
+Luvdisc,Water,Basic,1,,
+Magikarp,Water,Basic,6,,
+Manaphy,Water,Basic,1,,
+Mantyke,Water,Basic,1,,
+Marill,Water,Basic,1,,Azumarill
+Marshtomp,Water,Stage 1,1,Mudkip,
+Octillery,Water,Stage 1,1,Remoraid,
+Omanyte,Water,Restored,1,Helix Fossil Omanyte,
+Palafin,Water,Stage 1,5,Finizen,
+Panpour,Water,Basic,4,,Simipour
+Pelipper,Water,Stage 1,2,,
+Poliwag,Water,Basic,3,,Poliwhirl
+Poliwhirl,Water,Stage 1,4,Poliwag,
+Prinplup,Water,Stage 1,1,Piplup,
+Psyduck,Water,Basic,1,,
+Quaquaval,Water,Stage 2,1,Quaxwell,
+Quaxly,Water,Basic,2,,Quaxwell
+Quaxwell,Water,Stage 1,1,Quaxly,Quaquaval
+Relicanth,Water,Basic,4,,
+Remoraid,Water,Basic,3,,Octillery
+Samurott,Water,Stage 2,1,,Dewott
+Sealeo,Water,Stage 1,1,Spheal,
+Seel,Water,Basic,2,,Dewgong
+Shellos,Water,Basic,3,,
+Simipour,Water,Stage 1,2,,
+Slowbro,Water,Stage 1,1,Slowpoke,
+Slowpoke,Water,Basic,1,,Slowbro
+Snom,Water,Basic,2,,
+Snorunt,Water,Basic,3,,Glalie
+Squirtle,Water,Basic,3,,Wartortle
+Starmie,Water,Stage 1,1,Staryu,
+Staryu,Water,Basic,1,,Starmie
+Tatsugiri,Water,Basic,2,,
+Tentacool,Water,Basic,5,,
+Totodile,Water,Basic,1,,Croconaw
+Tympole,Water,Basic,3,,
+Vanillish,Water,Stage 1,1,Vanillite,Vanilluxe
+Vanillite,Water,Basic,3,,Vanillish
+Vanilluxe,Water,Stage 2,1,Vanillish,
+Veluza,Water,Basic,2,,
+Wailord,Water,Stage 1,3,Wailmer,
+Wailmer,Water,Basic,7,,Wailord
+Wartortle,Water,Stage 1,1,Squirtle,Blastoise
+Wiglett,Water,Basic,2,,Wugtrio
+Wimpod,Water,Basic,3,,
+Wingull,Water,Basic,3,,Pelipper
+Wishiwashi,Water,Basic,2,,
+Wugtrio,Water,Stage 1,2,Wiglett,
+Alcremie,Psychic,Stage 1,1,Milcery,
+Mienfoo,Fighting,Basic,1,,
+Ledyba,Grass,Basic,1,,
+Fan Rotom,Normal,Basic,2,,
+Pangoro,Dark,Stage 1,1,,
+Dubwool,Normal,Stage 1,1,,
+Mow Rotom,Grass,Basic,1,,
