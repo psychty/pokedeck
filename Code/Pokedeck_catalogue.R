@@ -55,8 +55,18 @@ attribute_x <- 'name'
 # So for now, we will have to extract using the first name only (which will return a whole load of pokemon we dont need, but at least it should contain the one pokemon we do need)
 
 # Basic pokemon ####
+# We don't want this to run through 800 pokemon each time a new card is added, this is not good use of resources
+
 collection_stage_basic <- collection_data %>% 
   filter(Stage == 'Basic')
+
+collection_processed_basic <- read_csv(paste0(local_store, '/Basic_processed_df.csv'),
+                            , locale = locale(encoding = 'latin1')) %>% 
+  
+basic_yet_to_process <- collection_stage_basic %>% 
+  filter(!Name_type %in% collection_processed_basic$Name_type)
+
+# TODO bugsquish
 
 for(i in 1:nrow(collection_stage_basic)){
 
@@ -130,6 +140,8 @@ if(i == nrow(collection_stage_basic)){
 }
 
 Basic_df <- Pokemon_api_df %>% 
+  mutate(name = case_when(name == 'Nidoran ♀' ~ 'Nidoran male',
+                          TRUE ~ name)) %>% 
   mutate(subtypes = ifelse(is.na(subtypes), subtypes1, subtypes)) %>% 
   select(Name = name, Type = types, Level = subtypes, Evolves_to = evolvesTo, Evolves_from = evolvesFrom) %>% 
   unique() %>% 
@@ -141,9 +153,20 @@ Basic_df <- Pokemon_api_df %>%
   mutate(Times_appeared = n()) %>% 
   filter(!(Times_appeared > 1 & is.na(Evolves_to))) %>% 
   mutate(Final_stage = case_when(is.na(Evolves_to) ~ 'Final evolution',
-                                 !is.na(Evolves_to) ~ 'Not final evolution')) 
+                                 !is.na(Evolves_to) ~ 'Not final evolution')) %>% 
+  filter(!(Name == 'Galarian Meowth' & Evolves_to == 'Perrserker'))
 
 setdiff(collection_stage_basic$Name, Basic_df$Name)
+
+# There must be a duplicate
+# Basic_df %>% 
+#   group_by(Name_type) %>% 
+#   summarise(Appearances = n()) %>% 
+#   arrange(desc(Appearances))
+
+# Basic_df %>% 
+#   write.csv(., paste0(local_store, '/Basic_processed_df.csv'),
+#             row.names = FALSE)
 
 # Stage one ####
 
@@ -165,7 +188,6 @@ for(i in 1:nrow(collection_stage_one)){
     
   }
   
-  query_x = 'pikachu'
   query_string <- paste0("https://api.pokemontcg.io/v2/cards?q=", attribute_x, ":", query_x, "&select=subtypes,types,name,evolvesTo,evolvesFrom,images")
   
   # Response of the query 
@@ -228,7 +250,7 @@ Stage_one_df <- Pokemon_api_df %>%
   unique() %>% 
   mutate(Name = gsub("\\.", "", Name)) %>% 
   mutate(Name_type =  paste0(Name, '_', Type)) %>% 
-  filter(Name_type %in% collection_stage_basic$Name_type) %>%
+  filter(Name_type %in% collection_stage_one$Name_type) %>%
   filter(!Level %in% c('Baby','Restored')) %>% 
   group_by(Name_type) %>% 
   mutate(Times_appeared = n()) %>% 
@@ -237,6 +259,12 @@ Stage_one_df <- Pokemon_api_df %>%
                                  !is.na(Evolves_to) ~ 'Not final evolution')) %>% 
   mutate(Level = case_when(Name == 'Magmar' ~ 'Stage 1',
                            TRUE ~ Level))
+
+setdiff(collection_stage_one$Name, Stage_one_df$Name)
+
+Stage_one_df %>% 
+  write.csv(., paste0(local_store, '/Stage_one_processed_df.csv'),
+            row.names = FALSE)
 
 # Stage two ####
 collection_stage_two <- collection_data %>% 
@@ -319,13 +347,18 @@ Stage_two_df <- Pokemon_api_df %>%
   unique() %>% 
   mutate(Name = gsub("\\.", "", Name)) %>% 
   mutate(Name_type =  paste0(Name, '_', Type)) %>% 
-  filter(Name_type %in% collection_stage_basic$Name_type) %>%
+  filter(Name_type %in% collection_stage_two$Name_type) %>%
   filter(!Level %in% c('Baby','Restored')) %>% 
   group_by(Name_type) %>% 
   mutate(Times_appeared = n()) %>% 
   filter(!(Times_appeared > 1 & is.na(Evolves_to))) %>% 
   mutate(Final_stage = case_when(is.na(Evolves_to) ~ 'Final evolution',
                                  !is.na(Evolves_to) ~ 'Not final evolution')) 
+
+
+Stage_two_df %>% 
+  write.csv(., paste0(local_store, '/Stage_two_processed_df.csv'),
+            row.names = FALSE)
 
 
 # Restored pokemon ####
@@ -409,7 +442,7 @@ Restored_df <- Pokemon_api_df %>%
   unique() %>% 
   mutate(Name = gsub("\\.", "", Name)) %>% 
   mutate(Name_type =  paste0(Name, '_', Type)) %>% 
-  filter(Name_type %in% collection_stage_basic$Name_type) %>%
+  filter(Name_type %in% collection_stage_restored$Name_type) %>%
   filter(!Level %in% c('Baby')) %>% 
   group_by(Name_type) %>% 
   mutate(Times_appeared = n()) %>% 
@@ -417,10 +450,15 @@ Restored_df <- Pokemon_api_df %>%
   mutate(Final_stage = case_when(is.na(Evolves_to) ~ 'Final evolution',
                                  !is.na(Evolves_to) ~ 'Not final evolution')) 
 
-Basic_df
-Stage_one_df
-Stage_two_df
-Restored_df
+Restored_df %>% 
+  write.csv(., paste0(local_store, '/Restored_stage_processed_df.csv'),
+            row.names = FALSE)
+
+Basic_df <- read_csv(paste0(local_store, '/Basic_processed_df.csv'))
+Stage_one_df <- read_csv(paste0(local_store, '/Stage_one_processed_df.csv'))
+Stage_two_df <- read_csv(paste0(local_store, '/Stage_two_processed_df.csv'))
+Restored_df <- read_csv(paste0(local_store, '/Restored_stage_processed_df.csv'))
+
 
 # Missing cards ####
 
