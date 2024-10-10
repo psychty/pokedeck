@@ -29,8 +29,6 @@ collection_data <- collection_data %>%
   filter(!str_detect(Name, 'Pokegear')) %>% # also struggling with pokegear (because its a non-pokemon maybe)
   mutate(Name_type = paste0(Name, '_', Type)) 
 
-# TODO find overall pokemon data, then left join the hierarchy (evoles to/evolves from etc)
-
 # PokemonTCG.io
 # This is a free api for all cards, it does not require an api key but has rate limits so we may find we hit those at some point when we start looping through our raw_card_data
 
@@ -60,21 +58,28 @@ attribute_x <- 'name'
 collection_stage_basic <- collection_data %>% 
   filter(Stage == 'Basic')
 
-collection_processed_basic <- read_csv(paste0(local_store, '/Basic_processed_df.csv'),
-                            , locale = locale(encoding = 'latin1')) %>% 
+# Read in the data that has already been processed
+processed_basic <- read_csv(paste0(local_store, '/Processed_basic.csv'),
+                            , locale = locale(encoding = 'latin1'))
+
+# Check if there is anything left to process.
+collection_stage_basic_to_process <- collection_stage_basic %>% 
+  filter(Name != 'Flabébé') %>% 
+  filter(!Name_type %in% processed_basic$Name_type)
   
-basic_yet_to_process <- collection_stage_basic %>% 
-  filter(!Name_type %in% collection_processed_basic$Name_type)
+# If there is nothing left to process then process_basic does not change and in the next section is ignored. 
 
-# TODO bugsquish
+# If there is something to process, then only the new cards are processed and they are appended to the processed_basic object before it is re-written to file.
 
-for(i in 1:nrow(collection_stage_basic)){
+if(nrow(collection_stage_basic_to_process) > 0) {
+
+for(i in 1:nrow(collection_stage_basic_to_process)){
 
 if(i == 1){ 
   Pokemon_api_df <- data.frame()
   }
 
-query_x <- word(collection_stage_basic$Name[i])
+query_x <- word(collection_stage_basic_to_process$Name[i])
 
 # Fix for é characters
 if(query_x == 'Flabébé'){
@@ -131,7 +136,7 @@ dummy_df <- dummy_df %>%
 Pokemon_api_df <- Pokemon_api_df %>% 
   bind_rows(dummy_df)
 
-if(i == nrow(collection_stage_basic)){
+if(i == nrow(collection_stage_basic_to_process)){
   
   beepr::beep(2)
   
@@ -156,30 +161,51 @@ Basic_df <- Pokemon_api_df %>%
                                  !is.na(Evolves_to) ~ 'Not final evolution')) %>% 
   filter(!(Name == 'Galarian Meowth' & Evolves_to == 'Perrserker'))
 
-setdiff(collection_stage_basic$Name, Basic_df$Name)
+setdiff(collection_stage_basic_to_process$Name, Basic_df$Name)
 
-# There must be a duplicate
-# Basic_df %>% 
-#   group_by(Name_type) %>% 
-#   summarise(Appearances = n()) %>% 
-#   arrange(desc(Appearances))
+setdiff(collection_stage_basic_to_process$Name_type, Basic_df$Name_type)
 
-# Basic_df %>% 
-#   write.csv(., paste0(local_store, '/Basic_processed_df.csv'),
-#             row.names = FALSE)
+processed_basic_new <- collection_stage_basic_to_process %>%
+  left_join(Basic_df, by = c('Name', 'Type','Name_type')) %>% 
+  select(!c(Level, Times_appeared)) %>% 
+  filter(Name != 'Cascoon')
+
+processed_basic <- processed_basic_new %>% 
+  bind_rows(processed_basic) %>% 
+  unique()
+
+processed_basic %>%
+  write.csv(., paste0(local_store, '/Processed_basic.csv'),
+            row.names = FALSE)
+
+}
 
 # Stage one ####
 
 collection_stage_one <- collection_data %>% 
   filter(Stage == 'Stage 1')
 
-for(i in 1:nrow(collection_stage_one)){
+# Read in the data that has already been processed
+processed_s1 <- read_csv(paste0(local_store, '/Processed_stage_one.csv'),
+                                   , locale = locale(encoding = 'latin1'))
+
+collection_stage_one_to_process <- collection_stage_one %>% 
+  filter(Name != 'Flabébé') %>% 
+  filter(!Name_type %in% processed_s1$Name_type)
+
+# If there is nothing left to process then processed_s1 does not change and in the next section is ignored. 
+
+# If there is something to process, then only the new cards are processed and they are appended to the processed_s1 object before it is re-written to file.
+       
+if(nrow(collection_stage_one_to_process) > 0) {
+       
+for(i in 1:nrow(collection_stage_one_to_process)){
   
   if(i == 1){ 
     Pokemon_api_df <- data.frame()
   }
   
-  query_x <- word(collection_stage_one$Name[i])
+  query_x <- word(collection_stage_one_to_process$Name[i])
   
   # Fix for é characters
   if(query_x == 'Flabébé'){
@@ -236,7 +262,7 @@ for(i in 1:nrow(collection_stage_one)){
   Pokemon_api_df <- Pokemon_api_df %>% 
     bind_rows(dummy_df)
   
-  if(i == nrow(collection_stage_one)){
+  if(i == nrow(collection_stage_one_to_process)){
     
     beepr::beep(2)
     
@@ -250,7 +276,7 @@ Stage_one_df <- Pokemon_api_df %>%
   unique() %>% 
   mutate(Name = gsub("\\.", "", Name)) %>% 
   mutate(Name_type =  paste0(Name, '_', Type)) %>% 
-  filter(Name_type %in% collection_stage_one$Name_type) %>%
+  filter(Name_type %in% collection_stage_one_to_process$Name_type) %>%
   filter(!Level %in% c('Baby','Restored')) %>% 
   group_by(Name_type) %>% 
   mutate(Times_appeared = n()) %>% 
@@ -260,23 +286,49 @@ Stage_one_df <- Pokemon_api_df %>%
   mutate(Level = case_when(Name == 'Magmar' ~ 'Stage 1',
                            TRUE ~ Level))
 
-setdiff(collection_stage_one$Name, Stage_one_df$Name)
+setdiff(collection_stage_one_to_process$Name, Stage_one_df$Name)
 
-Stage_one_df %>% 
-  write.csv(., paste0(local_store, '/Stage_one_processed_df.csv'),
+setdiff(collection_stage_one_to_process$Name_type, Stage_one_df$Name_type)
+
+processed_stage_one_new <- collection_stage_one_to_process %>%
+  left_join(Stage_one_df, by = c('Name', 'Type','Name_type')) %>% 
+  select(!c(Level, Times_appeared)) %>% 
+  filter(Evolves_from != 'Claw Fossil' | is.na(Evolves_from))
+
+processed_s1 <- processed_stage_one_new %>% 
+  bind_rows(processed_s1) %>% 
+  unique()
+
+processed_s1 %>% 
+  write.csv(., paste0(local_store, '/Processed_stage_one.csv'),
             row.names = FALSE)
+
+}
 
 # Stage two ####
 collection_stage_two <- collection_data %>% 
   filter(Stage == 'Stage 2')
 
-for(i in 1:nrow(collection_stage_two)){
+# Read in the data that has already been processed
+processed_s2 <- read_csv(paste0(local_store, '/Processed_stage_two.csv'),
+                         , locale = locale(encoding = 'latin1'))
+
+collection_stage_two_to_process <- collection_stage_two %>% 
+  filter(Name != 'Flabébé') %>% 
+  filter(!Name_type %in% processed_s2$Name_type)
+# If there is nothing left to process then process_basic does not change and in the next section is ignored. 
+
+# If there is something to process, then only the new cards are processed and they are appended to the processed_basic object before it is re-written to file.
+
+if(nrow(collection_stage_two_to_process) > 0) {
+
+for(i in 1:nrow(collection_stage_two_to_process)){
   
   if(i == 1){ 
     Pokemon_api_df <- data.frame()
   }
   
-  query_x <- word(collection_stage_two$Name[i])
+  query_x <- word(collection_stage_two_to_process$Name[i])
   
   # Fix for é characters
   if(query_x == 'Flabébé'){
@@ -333,7 +385,7 @@ for(i in 1:nrow(collection_stage_two)){
   Pokemon_api_df <- Pokemon_api_df %>% 
     bind_rows(dummy_df)
   
-  if(i == nrow(collection_stage_two)){
+  if(i == nrow(collection_stage_two_to_process)){
     
     beepr::beep(2)
     
@@ -347,7 +399,7 @@ Stage_two_df <- Pokemon_api_df %>%
   unique() %>% 
   mutate(Name = gsub("\\.", "", Name)) %>% 
   mutate(Name_type =  paste0(Name, '_', Type)) %>% 
-  filter(Name_type %in% collection_stage_two$Name_type) %>%
+  filter(Name_type %in% collection_stage_two_to_process$Name_type) %>%
   filter(!Level %in% c('Baby','Restored')) %>% 
   group_by(Name_type) %>% 
   mutate(Times_appeared = n()) %>% 
@@ -355,23 +407,47 @@ Stage_two_df <- Pokemon_api_df %>%
   mutate(Final_stage = case_when(is.na(Evolves_to) ~ 'Final evolution',
                                  !is.na(Evolves_to) ~ 'Not final evolution')) 
 
+setdiff(collection_stage_two_to_process$Name, Stage_two_df$Name)
+setdiff(collection_stage_two_to_process$Name_type, Stage_two_df$Name_type)
 
-Stage_two_df %>% 
-  write.csv(., paste0(local_store, '/Stage_two_processed_df.csv'),
+processed_s2_new <- collection_stage_two_to_process %>%
+  left_join(Stage_two_df, by = c('Name', 'Type','Name_type')) %>% 
+  select(!c(Level, Times_appeared)) 
+
+processed_s2 <- processed_s2_new %>% 
+  bind_rows(processed_s2) %>% 
+  unique()
+
+processed_s2 %>% 
+  write.csv(., paste0(local_store, '/Processed_stage_two.csv'),
             row.names = FALSE)
 
+}
 
 # Restored pokemon ####
 collection_stage_restored <- collection_data %>% 
   filter(Stage == 'Restored')
 
-for(i in 1:nrow(collection_stage_restored)){
+# Read in the data that has already been processed
+processed_restored <- read_csv(paste0(local_store, '/Processed_restored.csv'),
+                         , locale = locale(encoding = 'latin1'))
+
+collection_stage_restored_to_process <- collection_stage_restored %>% 
+  filter(Name != 'Flabébé') %>% 
+  filter(!Name_type %in% processed_restored$Name_type)
+# If there is nothing left to process then process_basic does not change and in the next section is ignored. 
+
+# If there is something to process, then only the new cards are processed and they are appended to the processed_basic object before it is re-written to file.
+
+if(nrow(collection_stage_restored_to_process) > 0) {
+
+for(i in 1:nrow(collection_stage_restored_to_process)){
   
   if(i == 1){ 
     Pokemon_api_df <- data.frame()
   }
   
-  query_x <- word(collection_stage_restored$Name[i])
+  query_x <- word(collection_stage_restored_to_process$Name[i])
   
   # Fix for é characters
   if(query_x == 'Flabébé'){
@@ -394,12 +470,9 @@ for(i in 1:nrow(collection_stage_restored)){
   processed_df <- raw_data$data
   
   if(length(processed_df) == 0){
-    
     print(paste0('Check ', query_x, ' is spelled correctly in the file, it does not seem to be in the database'))
-    
     beepr::beep(4)
-    
-  }  
+    }  
   
   # df <- data.frame(matrix(unlist(processed_df), nrow=length(processed_df), byrow=TRUE))#
   
@@ -428,7 +501,7 @@ for(i in 1:nrow(collection_stage_restored)){
   Pokemon_api_df <- Pokemon_api_df %>% 
     bind_rows(dummy_df)
   
-  if(i == nrow(collection_stage_restored)){
+  if(i == nrow(collection_stage_restored_to_process)){
     
     beepr::beep(2)
     
@@ -442,24 +515,42 @@ Restored_df <- Pokemon_api_df %>%
   unique() %>% 
   mutate(Name = gsub("\\.", "", Name)) %>% 
   mutate(Name_type =  paste0(Name, '_', Type)) %>% 
-  filter(Name_type %in% collection_stage_restored$Name_type) %>%
-  filter(!Level %in% c('Baby')) %>% 
+  filter(Name_type %in% collection_stage_restored_to_process$Name_type) %>%
+  filter(Level %in% c('Restored')) %>% 
   group_by(Name_type) %>% 
   mutate(Times_appeared = n()) %>% 
   filter(!(Times_appeared > 1 & is.na(Evolves_to))) %>% 
   mutate(Final_stage = case_when(is.na(Evolves_to) ~ 'Final evolution',
                                  !is.na(Evolves_to) ~ 'Not final evolution')) 
 
-Restored_df %>% 
-  write.csv(., paste0(local_store, '/Restored_stage_processed_df.csv'),
+
+setdiff(collection_stage_restored_to_process$Name, Restored_df$Name)
+setdiff(collection_stage_restored_to_process$Name_type, Restored_df$Name_type)
+
+processed_restored_new <- collection_stage_restored_to_process %>%
+  left_join(Restored_df, by = c('Name', 'Type','Name_type')) %>% 
+  select(!c(Level, Times_appeared)) 
+
+processed_restored <- processed_restored_new %>% 
+  bind_rows(processed_restored) %>% 
+  unique()
+
+processed_restored %>% 
+  write.csv(., paste0(local_store, '/Processed_restored.csv'),
             row.names = FALSE)
 
-Basic_df <- read_csv(paste0(local_store, '/Basic_processed_df.csv'))
-Stage_one_df <- read_csv(paste0(local_store, '/Stage_one_processed_df.csv'))
-Stage_two_df <- read_csv(paste0(local_store, '/Stage_two_processed_df.csv'))
-Restored_df <- read_csv(paste0(local_store, '/Restored_stage_processed_df.csv'))
+}
 
+# These should be the most up to date versions of our objects
 
+processed_basic
+processed_s1
+processed_s2
+processed_restored
+
+rm(collection_stage_basic, collection_stage_basic_to_process, collection_stage_one, collection_stage_one_to_process, collection_stage_two, collection_stage_two_to_process, collection_stage_restored, collection_stage_restored_to_process, duplicate_nametype, attribute_x)
+
+# start here ####
 # Missing cards ####
 
 # TODO Identify missing cards
