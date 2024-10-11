@@ -316,6 +316,7 @@ processed_s2 <- read_csv(paste0(local_store, '/Processed_stage_two.csv'),
 collection_stage_two_to_process <- collection_stage_two %>% 
   filter(Name != 'Flabébé') %>% 
   filter(!Name_type %in% processed_s2$Name_type)
+
 # If there is nothing left to process then process_basic does not change and in the next section is ignored. 
 
 # If there is something to process, then only the new cards are processed and they are appended to the processed_basic object before it is re-written to file.
@@ -435,6 +436,7 @@ processed_restored <- read_csv(paste0(local_store, '/Processed_restored.csv'),
 collection_stage_restored_to_process <- collection_stage_restored %>% 
   filter(Name != 'Flabébé') %>% 
   filter(!Name_type %in% processed_restored$Name_type)
+
 # If there is nothing left to process then process_basic does not change and in the next section is ignored. 
 
 # If there is something to process, then only the new cards are processed and they are appended to the processed_basic object before it is re-written to file.
@@ -523,7 +525,6 @@ Restored_df <- Pokemon_api_df %>%
   mutate(Final_stage = case_when(is.na(Evolves_to) ~ 'Final evolution',
                                  !is.na(Evolves_to) ~ 'Not final evolution')) 
 
-
 setdiff(collection_stage_restored_to_process$Name, Restored_df$Name)
 setdiff(collection_stage_restored_to_process$Name_type, Restored_df$Name_type)
 
@@ -548,63 +549,91 @@ processed_s1
 processed_s2
 processed_restored
 
-rm(collection_stage_basic, collection_stage_basic_to_process, collection_stage_one, collection_stage_one_to_process, collection_stage_two, collection_stage_two_to_process, collection_stage_restored, collection_stage_restored_to_process, duplicate_nametype, attribute_x)
+rm(collection_stage_basic, collection_stage_basic_to_process, collection_stage_one, collection_stage_one_to_process, collection_stage_two, collection_stage_two_to_process, collection_stage_restored, collection_stage_restored_to_process, duplicate_nametype)
 
-# start here ####
 # Missing cards ####
 
 # TODO Identify missing cards
-basic_theoretical_top_down <- Stage_one_df %>% 
+basic_theoretical_top_down <- processed_s1 %>% 
   filter(!is.na(Evolves_from)) %>% 
   pull(Evolves_from) %>% 
   unique
 
 # Which basic pokemon are we missing? 
-Missing_basic_card <- setdiff(basic_theoretical_top_down, Basic_df$Name)
+Missing_basic_card <- setdiff(basic_theoretical_top_down, processed_basic$Name)
+
+# Expect this to be zero
+collection_data %>% 
+  filter(Name %in% Missing_basic_card)
 
 # What stage one cards should we have based on our stage 2 collection
-stage_one_theoretical_top_down <- Stage_two_df %>% 
+stage_one_theoretical_top_down <- processed_s2 %>% 
   pull(Evolves_from) %>% 
   unique
 
 # What stage one cards should we have based on our basic collection
-stage_one_theoretical_bottom_up <- Basic_df %>% 
+stage_one_theoretical_bottom_up <- processed_basic %>% 
   filter(!is.na(Evolves_to)) %>% 
   pull(Evolves_to) %>% 
   unique
 
 # Which stage one pokemon are we missing? 
-Missing_stage_one_card_a <- setdiff(stage_one_theoretical_top_down, Stage_one_df$Name)
+Missing_stage_one_card_a <- setdiff(stage_one_theoretical_top_down, processed_s1$Name)
 
 # Which stage one pokemon are we missing? 
-Missing_stage_one_card_b <- setdiff(stage_one_theoretical_bottom_up, Stage_one_df$Name)
+Missing_stage_one_card_b <- setdiff(stage_one_theoretical_bottom_up, processed_s1$Name)
 
 Missing_stage_one_card <- c(Missing_stage_one_card_a, Missing_stage_one_card_b) %>%
   unique
 
+# There are one or two edge cases here - Clefairy is a basic and a stage one card theoretically (as Cleffa was introduced also as basic but evoles into Clefairy)
+Missing_stage_one_card <- Missing_stage_one_card[! Missing_stage_one_card %in% c('Clefairy', 'Electabuzz')]
+
+rm(Missing_stage_one_card_a, Missing_stage_one_card_b)
+
+# Expect this to be zero
+collection_data %>% 
+  filter(Name %in% Missing_stage_one_card)
+
 # Which stage 2 cards are we missing based on our stage one collection
-stage_two_theoretical_bottom_up <- Stage_one_df %>% 
+stage_two_theoretical_bottom_up <- processed_s1 %>% 
   filter(!is.na(Evolves_to)) %>% 
   pull(Evolves_to) %>% 
   unique
 
 # Which stage one pokemon are we missing? 
-Missing_stage_two_card <- setdiff(stage_two_theoretical_bottom_up, Stage_two_df$Name)
+Missing_stage_two_card <- setdiff(stage_two_theoretical_bottom_up, processed_s2$Name)
+
+# Expect this to be zero
+collection_data %>% 
+  filter(Name %in% Missing_stage_two_card)
 
 # This will show us missing cards one up or one below each of our cards.
 Total_missing_names <- c(Missing_basic_card, Missing_stage_one_card, Missing_stage_two_card) %>% 
-  unique()
+  unique() 
 
-# TODO I'm not sure how it would behave or tell us about the final evolution (stage 2) of our basic cards if we didn't have stage 1 card. 
+Total_missing_names %>% print
+
+# Read in the data that has already been processed
+Processed_needs <- read_csv(paste0(local_store, '/Processed_needs.csv'),
+                            , locale = locale(encoding = 'latin1'))
+
+Needs_to_process <- Total_missing_names[! Total_missing_names %in% Processed_needs$Name]
+
+# If there is nothing left to process then processed_s1 does not change and in the next section is ignored. 
+
+# If there is something to process, then only the new cards are processed and they are appended to the processed_s1 object before it is re-written to file.
+
+if(length(Needs_to_process) > 0) {
 
 # Get data on missing cards ####
-for(i in 1:length(Total_missing_names)){
+for(i in 1:length(Needs_to_process)){
   
   if(i == 1){ 
     Pokemon_api_df <- data.frame()
   }
   
-  query_x <- word(Total_missing_names[i])
+  query_x <- word(Needs_to_process[i])
   
   query_string <- paste0("https://api.pokemontcg.io/v2/cards?q=", attribute_x, ":", query_x, "&select=subtypes,types,name,evolvesTo,evolvesFrom,images")
   
@@ -643,37 +672,87 @@ for(i in 1:length(Total_missing_names)){
   
 }
 
-Needs_df <- Pokemon_api_df %>% 
+Processed_needs_new <- Pokemon_api_df %>% 
   mutate(subtypes = ifelse(is.na(subtypes), subtypes1, subtypes)) %>% 
   select(Name = name, Type = types, Level = subtypes, Evolves_to = evolvesTo, Evolves_from = evolvesFrom) %>% 
   unique() %>% 
   mutate(Name_type = paste0(Name, '_', Type)) %>% 
-  filter(Name %in% Total_missing_names) %>% 
-  filter(!Level %in% c('Baby','Restored')) %>% 
+  filter(Name %in% Needs_to_process) %>% 
   group_by(Name) %>% 
-  mutate(Times_appeared = n()) %>% 
-  filter(!(Times_appeared > 1 & is.na(Evolves_to))) %>% 
   mutate(Final_stage = case_when(is.na(Evolves_to) ~ 'Final evolution',
                                  !is.na(Evolves_to) ~ 'Not final evolution')) %>% 
   mutate(Level = case_when(Name == 'Magmortar' ~ 'Stage 2',
-                           TRUE ~ Level))
+                           TRUE ~ Level)) %>% 
+  select(!c(Type, Name_type)) %>% unique()
 
-# Does the needs df (for the stage 2 pokemon) give us enough info to create our pokemon groups?
+Processed_needs <- Processed_needs_new %>% 
+  bind_rows(Processed_needs) %>% 
+  unique()
 
+}
+
+Processed_needs %>% 
+  filter(!Name %in% collection_data$Name) %>% # clear out any new cards added to the collection (this should eventually reduce this object to near zero)
+  mutate(Quantity = 0) %>% 
+  write.csv(., paste0(local_store, '/Processed_needs.csv'),
+            row.names = FALSE)
+
+# Still some that are quirky
+  data.frame(Name = Needs_to_process) %>% 
+    mutate(Quantity = 0)
+
+
+processed_basic %>% 
+  bind_rows(processed_s1) %>% 
+  bind_rows(processed_s2) %>% 
+  bind_rows(processed_restored) %>% 
+  bind_rows(Processed_needs) %>% 
+  bind_rows( data.frame(Name = Needs_to_process) %>% 
+               mutate(Quantity = 0)) %>% 
+  toJSON() %>% 
+  write_lines(paste0(local_store,'/collection_values.json'))
+
+
+###################################################
 # Grouping pokemon and finding final evolution ####
+###################################################
+
 # TODO Create a 'starting from' pokemon name so that we can group evolutions together.
-
-# For the basic stage this is easy
-Basic_df <- Basic_df %>% 
-  mutate(Starting_name = Name)
-
-# This is also pretty easy for stage one pokemon cards (as the evolved from is only one stage behind and you don't need to have the basic card for this information to be retrieved)
-Stage_one_df <- Stage_one_df %>% 
-  mutate(Starting_name = Evolves_from) 
-  
-# It is slightly trickier for stage two pokemon, when we don't have the stage one card (and as such, would not have got the evolving to stage one pokemon name). I think we can get around this
+# 
+# # For the basic stage this is easy
+# processed_basic <- processed_basic %>% 
+#   mutate(Starting_name = Name)
+# 
+# # This is also pretty easy for stage one pokemon cards (as the evolved from is only one stage behind and you don't need to have the basic card for this information to be retrieved)
+# processed_s1 <- processed_s1 %>% 
+#   mutate(Starting_name = Evolves_from) 
+#   
+# # It is slightly trickier for stage two pokemon, when we don't have the stage one card (and as such, would not have got the evolving to stage one pokemon name). I think we can get around this
+# 
+# one_form_pokemon <- processed_basic %>% 
+#   select(Starting_name, Final_stage) %>% 
+#   unique() %>% 
+#   filter(Final_stage == 'Final evolution') 
+# 
+# dual_form_pokemon <- processed_basic %>% 
+#   filter(!Starting_name %in% one_form_pokemon$Starting_name) %>% 
+#   select(Starting_name) %>%
+#   unique() %>% 
+#   left_join(processed_s1[c('Starting_name', 'Name', 'Final_stage')], by = 'Starting_name') %>% 
+#   rename('Stage_one_name' = 'Name') %>% 
+#   filter(Final_stage == 'Final evolution')
+# 
+# 
+# one_form_pokemon %>% 
+#   bind_rows(dual_form_pokemon) %>% 
+#   View()
 
 # TODO Create a value for wheather we can play the card or not based on whether we have the cards that evolve into the pokemon
 
+processed_s1[c('Name', 'Evolves_to')] %>% View()
 
+processed_basic %>% 
+  select(Basic_name = Name, Stage_one_name = Evolves_to) %>% 
+  left_join(processed_s1[c('Name', 'Evolves_to')], by = c('Stage_one_name' = 'Name')) %>% 
+  View()
 

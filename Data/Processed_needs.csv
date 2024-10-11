@@ -1,0 +1,135 @@
+"Name","Level","Evolves_to","Evolves_from","Final_stage","Times_appeared","Quantity"
+"Flapple","Stage 1",NA,"Applin","Final evolution",NA,0
+"Sharpedo","Stage 1",NA,"Carvanha","Final evolution",NA,0
+"Crawdaunt","Stage 1",NA,"Corphish","Final evolution",NA,0
+"Ribombee","Stage 1",NA,"Cutiefly","Final evolution",NA,0
+"Swanna","Stage 1",NA,"Ducklett","Final evolution",NA,0
+"Heliolisk","Stage 1",NA,"Helioptile","Final evolution",NA,0
+"Wigglytuff","Stage 1",NA,"Jigglypuff","Final evolution",NA,0
+"Weezing","Stage 1",NA,"Koffing","Final evolution",NA,0
+"Volcarona","Stage 1",NA,"Larvesta","Final evolution",NA,0
+"Shiinotic","Stage 1",NA,"Morelull","Final evolution",NA,0
+"Quagsire","Stage 1",NA,"Wooper","Final evolution",NA,0
+"Forretress","Stage 1",NA,"Pineco","Final evolution",NA,0
+"Scizor","Stage 1",NA,"Scyther","Final evolution",NA,0
+"Gastrodon","Stage 1",NA,"Shellos","Final evolution",NA,0
+"Dragalge","Stage 1",NA,"Skrelp","Final evolution",NA,0
+"Abomasnow","Stage 1",NA,"Snover","Final evolution",NA,0
+"Bewear","Stage 1",NA,"Stufful","Final evolution",NA,0
+"Tentacruel","Stage 1",NA,"Tentacool","Final evolution",NA,0
+"Garbodor","Stage 1",NA,"Trubbish","Final evolution",NA,0
+"Golisopod","Stage 1",NA,"Wimpod","Final evolution",NA,0
+"Armaldo","Stage 2",NA,"Anorith","Final evolution",NA,0
+"Armaldo","Stage 1",NA,"Anorith","Final evolution",NA,0
+"Kingambit","Stage 2",NA,"Bisharp","Final evolution",NA,0
+"Dustox","Stage 2",NA,"Cascoon","Final evolution",NA,0
+"Greninja","Stage 2",NA,"Frogadier","Final evolution",NA,0
+"Gengar","Stage 2",NA,"Haunter","Final evolution",NA,0
+"Ludicolo","Stage 2",NA,"Lombre","Final evolution",NA,0
+"Swampert","Stage 2",NA,"Marshtomp","Final evolution",NA,0
+"Metagross","Stage 2",NA,"Metang","Final evolution",NA,0
+"Shiftry","Stage 2",NA,"Nuzleaf","Final evolution",NA,0
+"Empoleon","Stage 2",NA,"Prinplup","Final evolution",NA,0
+"Tyranitar","Stage 2",NA,"Pupitar","Final evolution",NA,0
+"Decidueye","Stage 2",NA,"Dartrix","Final evolution",1,0
+"Arboliva","Stage 2",NA,"Dolliv","Final evolution",1,0
+"Dragapult","Stage 2",NA,"Drakloak","Final evolution",1,0
+"Froslass","Stage 1",NA,"Snorunt","Final evolution",1,0
+"Gothitelle","Stage 2",NA,"Gothorita","Final evolution",1,0
+"Conkeldurr","Stage 2",NA,"Gurdurr","Final evolution",1,0
+"Klinklang","Stage 2",NA,"Klang","Final evolution",1,0
+"Luxray","Stage 2",NA,"Luxio","Final evolution",1,0
+"Magmortar","Stage 2",NA,"Magmar","Final evolution",1,0
+"Butterfree","Stage 2",NA,"Metapod","Final evolution",1,0
+"Grimmsnarl","Stage 2",NA,"Morgrem","Final evolution",1,0
+"Rhyperior","Stage 2",NA,"Rhydon","Final evolution",1,0
+"Walrein","Stage 2",NA,"Sealeo","Final evolution",1,0
+"Jumpluff","Stage 2",NA,"Skiploom","Final evolution",1,0
+"Staraptor","Stage 2",NA,"Staravia","Final evolution",1,0
+"Rillaboom","Stage 2",NA,"Thwackey","Final evolution",1,0
+"Slaking","Stage 2",NA,"Vigoroth","Final evolution",1,0
+"Blastoise","Stage 2",NA,"Wartortle","Final evolution",1,0
+"Milcery","Basic","Alcremie",NA,"Not final evolution",1,0
+"Unidentified Fossil","Item",NA,NA,"Final evolution",1,0
+"Arrokuda","Basic","Barraskewda",NA,"Not final evolution",1,0
+"Popplio","Basic","Brionne",NA,"Not final evolution",1,0
+"Minccino","Basic","Cinccino",NA,"Not final evolution",1,0
+"Shellder","Basic","Cloyster",NA,"Not final evolution",1,0
+"Rowlet","Basic","Dartrix",NA,"Not final evolution",1,0
+"Oshawott","Basic","Dewott",NA,"Not final evolution",1,0
+"Karrablast","Basic","Escavalier",NA,"Not final evolution",1,0
+"Galarian Slowpoke","Basic",NA,NA,"Final evolution",1,0
+"Gothita","Basic","Gothorita",NA,"Not final evolution",2,0
+"Timburr","Basic","Gurdurr",NA,"Not final evolution",1,0
+"Hippopotas","Basic","Hippowdon",NA,"Not final evolution",1,0
+"Clamperl","Basic",NA,NA,"Final evolution",1,0
+"Kricketot","Basic","Kricketune",NA,"Not final evolution",1,0
+"Zigzagoon","Basic","Linoone",NA,"Not final evolution",1,0
+"Whismur","Basic","Loudred",NA,"Not final evolution",1,0
+"Finneon","Basic","Lumineon",NA,"Not final evolution",1,0
+"Mudkip","Basic","Marshtomp",NA,"Not final evolution",1,0
+"Poochyena","Basic","Mightyena",NA,"Not final evolution",1,0
+"Piplup","Basic","Prinplup",NA,"Not final evolution",1,0
+"Roselia","Basic","Roserade",NA,"Not final evolution",2,0
+"Silicobra","Basic","Sandaconda",NA,"Not final evolution",2,0
+"Spheal","Basic","Sealeo",NA,"Not final evolution",1,0
+"Sunkern","Basic","Sunflora",NA,"Not final evolution",1,0
+"Flaaffy","Stage 1","Ampharos","Mareep","Not final evolution",2,0
+"Carkol","Stage 1","Coalossal","Rolycoly","Not final evolution",1,0
+"Hisuian Sliggoo","Stage 1","Goodra","Goomy","Not final evolution",1,0
+"Dottler","Stage 1","Orbeetle","Blipbug","Not final evolution",2,0
+"Togetic","Stage 1","Togekiss","Togepi","Not final evolution",3,0
+"Trumbeak","Stage 1","Toucannon","Pikipek","Not final evolution",1,0
+"Graveler","Stage 1","Golem","Geodude","Not final evolution",1,0
+"Lairon","Stage 1","Aggron","Aron","Not final evolution",1,0
+"Shelgon","Stage 1","Salamence","Bagon","Not final evolution",2,0
+"Weepinbell","Stage 1","Victreebel","Bellsprout","Not final evolution",1,0
+"Zebstrika","Stage 1",NA,"Blitzle","Final evolution",1,0
+"Cherrim","Stage 1",NA,"Cherubi","Final evolution",1,0
+"Clawitzer","Stage 1",NA,"Clauncher","Final evolution",1,0
+"Marowak","Stage 1",NA,"Cubone","Final evolution",1,0
+"Copperajah","Stage 1",NA,"Cufant","Final evolution",1,0
+"Zweilous","Stage 1","Hydreigon","Deino","Not final evolution",3,0
+"Dodrio","Stage 1",NA,"Doduo","Final evolution",1,0
+"Dragonair","Stage 1","Dragonite","Dratini","Not final evolution",2,0
+"Manectric","Stage 1",NA,"Electrike","Final evolution",1,0
+"Meowstic","Stage 1",NA,"Espurr","Final evolution",1,0
+"Milotic","Stage 1",NA,"Feebas","Final evolution",1,0
+"Amoonguss","Stage 1",NA,"Foongus","Final evolution",1,0
+"Persian","Stage 1",NA,"Meowth","Final evolution",1,0
+"Cofagrigus","Stage 1",NA,"Yamask","Final evolution",1,0
+"Gabite","Stage 1","Garchomp","Gible","Not final evolution",3,0
+"Purugly","Stage 1",NA,"Glameow","Final evolution",1,0
+"Glimmora","Stage 1",NA,"Glimmet","Final evolution",1,0
+"Seaking","Stage 1",NA,"Goldeen","Final evolution",1,0
+"Eldegoss","Stage 1",NA,"Gossifleur","Final evolution",1,0
+"Arcanine","Stage 1",NA,"Growlithe","Final evolution",1,0
+"Seadra","Stage 1","Kingdra","Horsea","Not final evolution",1,0
+"Lickilicky","Stage 1",NA,"Lickitung","Final evolution",1,0
+"Gyarados","Stage 1",NA,"Magikarp","Final evolution",1,0
+"Mantine","Basic",NA,NA,"Final evolution",1,0
+"Melmetal","Stage 1",NA,"Meltan","Final evolution",1,0
+"Nidorina","Stage 1","Nidoqueen","Nidoran ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ","Not final evolution",3,0
+"Simisage","Stage 1",NA,"Pansage","Final evolution",1,0
+"Lilligant","Stage 1",NA,"Petilil","Final evolution",1,0
+"Donphan","Stage 1",NA,"Phanpy","Final evolution",1,0
+"Pidgeotto","Stage 1","Pidgeot","Pidgey","Not final evolution",1,0
+"Golduck","Stage 1",NA,"Psyduck","Final evolution",1,0
+"Braviary","Stage 1",NA,"Rufflet","Final evolution",1,0
+"Raboot","Stage 1","Cinderace","Scorbunny","Not final evolution",1,0
+"Swadloon","Stage 1","Leavanny","Sewaddle","Not final evolution",1,0
+"Accelgor","Stage 1",NA,"Shelmet","Final evolution",1,0
+"Banette","Stage 1",NA,"Shuppet","Final evolution",1,0
+"Delcatty","Stage 1",NA,"Skitty","Final evolution",1,0
+"Frosmoth","Stage 1",NA,"Snom","Final evolution",1,0
+"Duosion","Stage 1","Reuniclus","Solosis","Not final evolution",1,0
+"Fearow","Stage 1",NA,"Spearow","Final evolution",1,0
+"Aromatisse","Stage 1",NA,"Spritzee","Final evolution",1,0
+"Tangrowth","Stage 1",NA,"Tangela","Final evolution",1,0
+"Vibrava","Stage 1","Flygon","Trapinch","Not final evolution",3,0
+"Palpitoad","Stage 1","Seismitoad","Tympole","Not final evolution",2,0
+"Revavroom","Stage 1",NA,"Varoom","Final evolution",1,0
+"Whirlipede","Stage 1","Scolipede","Venipede","Not final evolution",2,0
+"Kakuna","Stage 1","Beedrill","Weedle","Not final evolution",1,0
+"Boltund","Stage 1",NA,"Yamper","Final evolution",1,0
+"Primarina","Stage 2",NA,"Brionne","Final evolution",1,0

@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    font-family: "Syne", "Myriad W01 Regular", Helvetica, Arial, "Lucida Grande",
+      sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
+  
+  body {
+    width: 80%;
+    margin: auto;
+  }
+    
+    @media screen and (max-width: 500px) {
+      
+      body {
+        width: calc(100% - 20px);
+        margin: auto;
+        /* margin-right: 0; */
+      }
+  }
+  
+  p {
+      font-size: 0.9rem;
+      text-align: justify;
+      color: #4c4c4e;
+    }
+    
+  li {
+     font-size: 0.9rem;
+     color: #4c4c4e;
+     text-align: justify;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     padding-right: 20px;
+  }
+    
