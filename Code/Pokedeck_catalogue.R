@@ -701,6 +701,7 @@ Processed_needs %>%
   data.frame(Name = Needs_to_process) %>% 
     mutate(Quantity = 0)
 
+# I want to be able to search a list and say whether it is a card needed (and if theres no match then maybe you could buy the card but this could add to the collection).
 
 processed_basic %>% 
   bind_rows(processed_s1) %>% 
@@ -712,6 +713,47 @@ processed_basic %>%
   toJSON() %>% 
   write_lines(paste0(local_store,'/collection_values.json'))
 
+
+# Can you get a whole list ####
+
+# Ordinarily we'd like to use the most recently available release of patients, and could use the following code to extract the latest.
+calls_webpage <- read_html('https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_name') %>%
+  html_nodes("a") %>%
+  html_attr("href")
+
+# # we know the actual page we want has a url which starts with the following string, so reduce the scraped list above to those which include it
+calls_pokemon <- unique(grep('Pok', calls_webpage, value = T))
+
+bulbapedia_df <- as.data.frame(calls_pokemon) %>% 
+  rename(Name = calls_pokemon) %>% 
+  filter(str_detect(Name, '^/wiki/')) %>% 
+  mutate(Name = strex::str_after_first(Name, '/wiki/')) %>% 
+  mutate(Name = strex::str_before_last(Name, '_')) %>% 
+  filter(Name != 'Pok%C3%A9mon') %>% 
+  mutate(Name = gsub('_', ' ', gsub('\\.', '', Name))) %>% 
+  unique()
+
+bulbapedia_df %>% 
+  write.csv(., paste0(local_store, '/bulbapedia_full_name_list.csv'),
+            row.names = FALSE)
+
+
+collection_data %>% filter(Name %in% bulbapedia_df$Name) %>% 
+  select(Name) %>% unique %>% nrow
+
+
+collection_data %>% 
+  pull(Name) %>% unique %>% length
+
+
+setdiff(collection_data$Name, bulbapedia_df$Name)
+
+
+# 
+# # We also know that the top result will be the latest version (even though the second result is the next upcoming version)
+# calls_patient_numbers_webpage <- read_html(paste0('https://digital.nhs.uk/',calls_patient_numbers_webpage[1])) %>%
+#   html_nodes("a") %>%
+#   html_attr("href")
 
 ###################################################
 # Grouping pokemon and finding final evolution ####

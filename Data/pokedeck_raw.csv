@@ -10,11 +10,11 @@ Alolan Grimer,Darkness,Basic,1
 Alolan Raticate,Darkness,Stage 1,1
 Alolan Rattata,Darkness,Basic,1
 Alomomola,Water,Basic,1
-Altaria,Dragon,Stage 1,1
+Altaria,Dragon,Stage 1,2
 Altaria,Colorless,Stage 1,2
 Ambipom,Colorless,Stage 1,2
 Ampharos,Lightning,Stage 2,1
-Anorith,Fighting,Stage 1,2
+Anorith,Fighting,Stage 1,4
 Applin,Grass,Basic,1
 Araquanid,Water,Stage 1,3
 Arbok,Psychic,Stage 1,1
@@ -26,18 +26,18 @@ Aron,Metal,Basic,3
 Audino,Colorless,Basic,1
 Avalugg,Water,Stage 1,1
 Azumarill,Psychic,Stage 1,2
-Azumarill,Water,Stage 1,2
+Azumarill,Water,Stage 1,3
 Bagon,Dragon,Basic,2
 Baltoy,Psychic,Basic,2
-Baltoy,Fighting,Basic,3
+Baltoy,Fighting,Basic,4
 Barboach,Water,Basic,1
 Barboach,Fighting,Basic,1
 Barraskewda,Water,Stage 1,1
 Beartic,Water,Stage 1,1
 Beheeyem,Psychic,Stage 1,6
 Beldum,Metal,Basic,4
-Bellibolt,Lightning,Stage 1,2
-Bellossom,Grass,Stage 2,5
+Bellibolt,Lightning,Stage 1,4
+Bellossom,Grass,Stage 2,6
 Bellsprout,Grass,Basic,1
 Bergmite,Water,Basic,2
 Bibarel,Colorless,Stage 1,2
@@ -58,8 +58,9 @@ Bronzor,Metal,Basic,1
 Bruxish,Water,Basic,2
 Buizel,Water,Basic,2
 Bulbasaur,Grass,Basic,2
-Buneary,Colorless,Basic,4
-Bunnelby,Colorless,Basic,1
+Buneary,Colorless,Basic,5
+Bunnelby,Colorless,Basic,2
+Butterfree,Grass,Stage 2,1
 Cacnea,Grass,Basic,1
 Cacturne,Grass,Stage 1,1
 Camerupt,Fire,Stage 1,3
@@ -72,43 +73,44 @@ Caterpie,Grass,Basic,2
 Celebi,Grass,Basic,1
 Centiskorch,Fire,Stage 1,3
 Cetitan,Water,Stage 1,4
-Cetoddle,Water,Basic,2
+Cetoddle,Water,Basic,3
 Chandelure,Fire,Stage 2,1
 Chansey,Colorless,Basic,1
 Charcadet,Fire,Basic,5
 Charizard,Fire,Stage 2,2
 Charjabug,Lightning,Stage 1,1
-Charmander,Fire,Basic,3
+Charmander,Fire,Basic,4
 Charmeleon,Fire,Stage 1,3
-Chatot,Colorless,Basic,1
+Chatot,Colorless,Basic,2
 Cherubi,Grass,Basic,1
 Chewtle,Water,Basic,3
 Chimchar,Fire,Basic,1
-Chimecho,Psychic,Basic,5
+Chimecho,Psychic,Basic,6
 Chinchou,Lightning,Basic,4
 Cinccino,Colorless,Stage 1,2
 Clauncher,Water,Basic,2
 Claydol,Fighting,Stage 1,1
+Claydol,Psychic,Stage 1,1
 Clefable,Fairy,Stage 1,1
 Clefable,Psychic,Stage 1,1
 Clefairy,Fairy,Basic,1
-Clefairy,Psychic,Basic,5
+Clefairy,Psychic,Basic,6
 Cleffa,Psychic,Basic,1
-Clobbopus,Fighting,Basic,1
+Clobbopus,Fighting,Basic,2
 Cloyster,Water,Stage 1,4
 Coalossal,Fighting,Stage 2,1
-Combee,Grass,Basic,4
+Combee,Grass,Basic,5
 Comfey,Psychic,Basic,1
-Corphish,Water,Basic,3
+Corphish,Water,Basic,4
 Cosmoem,Psychic,Stage 1,1
 Cosmog,Psychic,Basic,1
 Cottonee,Fairy,Basic,1
 Cottonee,Grass,Basic,1
 Crabominable,Water,Stage 1,1
 Crabominable,Fighting,Stage 1,3
-Crabrawler,Fighting,Basic,2
+Crabrawler,Fighting,Basic,3
 Cramorant,Water,Basic,1
-Croagunk,Darkness,Basic,5
+Croagunk,Darkness,Basic,6
 Crobat,Darkness,Stage 2,3
 Crocalor,Fire,Stage 1,4
 Croconaw,Water,Stage 1,1
@@ -118,11 +120,11 @@ Cubchoo,Water,Basic,1
 Cubone,Fighting,Basic,1
 Cufant,Metal,Basic,4
 Cutiefly,Psychic,Basic,1
-Cyclizar,Colorless,Basic,1
+Cyclizar,Colorless,Basic,2
 Darkrai,Darkness,Basic,1
 Darmanitan,Fire,Stage 1,2
 Dartrix,Grass,Stage 1,1
-Darumaka,Fire,Basic,2
+Darumaka,Fire,Basic,3
 Dedenne,Fairy,Basic,1
 Dedenne,Psychic,Basic,2
 Deerling,Grass,Basic,1
@@ -134,17 +136,18 @@ Dewott,Water,Stage 1,1
 Dewpider,Grass,Basic,1
 Dhelmise,Grass,Basic,1
 Dhelmise,Psychic,Basic,1
-Diggersby,Fighting,Stage 1,3
+Diggersby,Fighting,Stage 1,4
 Diglett,Fighting,Basic,2
 Dipplin,Dragon,Stage 1,1
-Doduo,Colorless,Basic,1
+Doduo,Colorless,Basic,2
 Dolliv,Grass,Stage 1,1
+Dondozo,Water,Basic,2
 Doublade,Metal,Stage 1,2
-Drakloak,Psychic,Stage 1,3
+Drakloak,Psychic,Stage 1,4
 Drampa,Dragon,Basic,2
 Dratini,Dragon,Basic,3
 Drednaw,Water,Stage 1,2
-Dreepy,Psychic,Basic,3
+Dreepy,Psychic,Basic,4
 Drifblim,Psychic,Stage 1,1
 Drifloon,Psychic,Basic,2
 Drilbur,Fighting,Basic,2
@@ -158,8 +161,8 @@ Durant,Grass,Basic,1
 Durant,Metal,Basic,1
 Dwebble,Grass,Basic,2
 Eelektrik,Lightning,Stage 1,1
-Eelektross,Lightning,Stage 2,1
-Eevee,Colorless,Basic,5
+Eelektross,Lightning,Stage 2,2
+Eevee,Colorless,Basic,6
 Eiscue,Water,Basic,5
 Ekans,Psychic,Basic,1
 Electabuzz,Lightning,Basic,4
@@ -168,7 +171,8 @@ Electrike,Lightning,Basic,3
 Electrode,Lightning,Stage 1,3
 Elekid,Lightning,Basic,1
 Elgyem,Psychic,Basic,6
-Emolga,Lightning,Basic,2
+Emolga,Lightning,Basic,3
+Entei,Fire,Basic,1
 Escavalier,Metal,Stage 1,1
 Espathra,Psychic,Stage 1,2
 Espeon,Psychic,Stage 1,2
@@ -186,7 +190,7 @@ Feraligatr,Water,Stage 2,1
 Ferroseed,Metal,Basic,9
 Ferrothorn,Metal,Stage 1,4
 Fidough,Psychic,Basic,1
-Finizen,Water,Basic,1
+Finizen,Water,Basic,3
 Flabébé,Fairy,Basic,1
 Flamigo,Colorless,Basic,1
 Flamigo,Fighting,Basic,3
@@ -202,10 +206,11 @@ Florges,Psychic,Stage 2,1
 Flutter Mane,Psychic,Basic,2
 Fomantis,Grass,Basic,3
 Foongus,Grass,Basic,2
-Frigibax,Water,Basic,2
+Frigibax,Water,Basic,3
 Frillish,Water,Basic,1
 Froakie,Water,Basic,2
-Frogadier,Water,Stage 1,2
+Frogadier,Water,Stage 1,3
+Frosmoth,Water,Stage 1,1
 Fuecoco,Fire,Basic,6
 Furfrou,Colorless,Basic,1
 Galarian Corsola,Psychic,Basic,1
@@ -221,6 +226,7 @@ Galarian Stunfisk,Metal,Basic,1
 Galarian Yamask,Fighting,Basic,1
 Galarian Zigzagoon,Darkness,Basic,1
 Galvantula,Lightning,Stage 1,1
+Garbodor,Darkness,Stage 1,1
 Gardevoir,Psychic,Stage 2,1
 Garganacl,Fighting,Stage 2,2
 Gastly,Psychic,Basic,2
@@ -235,26 +241,28 @@ Glaceon,Water,Stage 1,1
 Glalie,Water,Stage 1,2
 Glameow,Colorless,Basic,1
 Gligar,Fighting,Basic,3
-Glimmet,Fighting,Basic,2
+Glimmet,Fighting,Basic,3
 Gliscor,Fighting,Stage 1,2
 Gloom,Grass,Stage 1,1
 Golbat,Psychic,Stage 1,1
 Golbat,Darkness,Stage 1,1
 Goldeen,Water,Basic,1
+Golduck,Water,Stage 1,1
 Golett,Fighting,Basic,2
 Golurk,Fighting,Stage 1,2
+Goomy,Dragon,Basic,1
 Gossifleur,Grass,Basic,1
 Gothorita,Psychic,Stage 1,3
 Gourgeist,Psychic,Stage 1,2
 Granbull,Fairy,Stage 1,1
 Granbull,Psychic,Stage 1,1
-Grapploct V,Fighting,Basic,1
 Grapploct,Fighting,Stage 1,1
+Grapploct V,Fighting,Basic,1
 Great Tusk,Fighting,Basic,2
 Greavard,Psychic,Basic,2
 Greedent,Colorless,Stage 1,1
 Grimer,Darkness,Basic,2
-Grookey,Grass,Basic,1
+Grookey,Grass,Basic,2
 Grotle,Grass,Stage 1,2
 Growlithe,Fire,Basic,4
 Grubbin,Grass,Basic,2
@@ -264,15 +272,16 @@ Gurdurr,Fighting,Stage 1,1
 Hariyama,Fighting,Stage 1,2
 Haunter,Psychic,Stage 1,1
 Haunter,Darkness,Stage 1,1
-Hawlucha,Fighting,Basic,4
+Hawlucha,Fighting,Basic,6
 Heatmor,Fire,Basic,3
-Helioptile,Lightning,Basic,3
-Heracross,Grass,Basic,2
-Herdier,Colorless,Stage 1,2
+Helioptile,Lightning,Basic,4
+Heracross,Grass,Basic,3
+Herdier,Colorless,Stage 1,3
 Hippowdon,Fighting,Stage 1,1
 Hisuian Goodra,Dragon,Stage 2,1
 Hisuian Growlithe,Fighting,Basic,5
 Hisuian Samurott,Darkness,Stage 2,1
+Hitmonchan,Fighting,Basic,1
 Honchkrow,Darkness,Stage 1,3
 Honedge,Metal,Basic,1
 Hoothoot,Colorless,Basic,2
@@ -280,19 +289,19 @@ Hoppip,Grass,Basic,2
 Horsea,Water,Basic,3
 Houndoom,Fire,Stage 1,2
 Houndour,Fire,Basic,2
-Houndour,Darkness,Basic,2
+Houndour,Darkness,Basic,3
 Houndstone,Psychic,Stage 1,3
 Huntail,Water,Stage 1,1
 Hypno,Psychic,Stage 1,1
 Illumise,Grass,Basic,1
-Impidimp,Darkness,Basic,1
+Impidimp,Darkness,Basic,2
 Incineroar,Fire,Stage 2,1
-Indeedee,Psychic,Basic,3
+Indeedee,Psychic,Basic,4
 Indeedee,Colorless,Basic,1
 Infernape,Fire,Stage 2,1
 Inkay,Psychic,Basic,1
-Inkay,Darkness,Basic,3
-Iron Bundle,Water,Basic,1
+Inkay,Darkness,Basic,4
+Iron Bundle,Water,Basic,2
 Iron Moth,Fire,Basic,1
 Iron Valiant,Psychic,Basic,2
 Ivysaur,Grass,Stage 1,2
@@ -308,7 +317,9 @@ Kangaskhan,Colorless,Basic,2
 Kecleon,Colorless,Basic,2
 Keldeo,Water,Basic,2
 Kilowattrel,Lightning,Stage 1,1
-Kirlia,Psychic,Stage 1,4
+Kingambit,Darkness,Stage 2,1
+Kingdra,Water,Stage 2,1
+Kirlia,Psychic,Stage 1,5
 Klang,Metal,Stage 1,4
 Klawf,Fighting,Basic,1
 Klefki,Metal,Basic,1
@@ -316,43 +327,45 @@ Klink,Metal,Basic,3
 Koffing,Darkness,Basic,2
 Koraidon,Dragon,Basic,1
 Koraidon,Fighting,Basic,1
-Kricketune,Grass,Stage 1,1
+Krabby,Water,Basic,1
+Kricketune,Grass,Stage 1,2
 Krokorok,Darkness,Stage 1,1
 Krookodile,Fighting,Stage 2,1
 Kubfu,Fighting,Basic,1
-Lampent,Fire,Stage 1,5
+Lampent,Fire,Stage 1,6
 Lanturn,Lightning,Stage 1,3
 Lapras,Water,Basic,2
 Larvesta,Fire,Basic,3
 Larvesta,Grass,Basic,1
-Larvitar,Fighting,Basic,5
+Larvitar,Fighting,Basic,6
 Lechonk,Colorless,Basic,7
 Ledian,Grass,Stage 1,1
 Ledyba,Grass,Basic,2
-Lickitung,Colorless,Basic,3
+Lickitung,Colorless,Basic,4
 Liepard,Darkness,Stage 1,1
-Lillipup,Colorless,Basic,1
+Lillipup,Colorless,Basic,2
 Linoone,Colorless,Stage 1,1
 Litleo,Fire,Basic,2
 Litten,Fire,Basic,2
-Litwick,Fire,Basic,3
+Litwick,Fire,Basic,4
 Lombre,Grass,Stage 1,1
 Lopunny,Colorless,Stage 1,4
 Lotad,Water,Basic,1
 Loudred,Colorless,Stage 1,1
 Lucario,Fighting,Stage 1,1
 Lumineon,Water,Stage 1,2
-Lunatone,Psychic,Basic,3
+Lunatone,Psychic,Basic,4
 Lurantis,Grass,Stage 1,1
 Luvdisc,Water,Basic,2
 Luxio,Lightning,Stage 1,3
-Lycanroc,Fighting,Stage 1,1
-Mabosstiff,Darkness,Stage 1,1
+Lycanroc,Fighting,Stage 1,2
+Mabosstiff,Darkness,Stage 1,2
 Magby,Fire,Basic,1
 Magcargo,Fire,Stage 1,5
 Magikarp,Water,Basic,6
 Magmar,Fire,Stage 1,2
-Magnemite,Lightning,Basic,8
+Magnemite,Lightning,Basic,9
+Magnemite,Metal,Basic,1
 Magneton,Lightning,Stage 1,3
 Magnezone,Lightning,Stage 2,1
 Makuhita,Fighting,Basic,3
@@ -362,11 +375,11 @@ Mandibuzz,Darkness,Stage 1,1
 Mankey,Fighting,Basic,4
 Mantyke,Water,Basic,1
 Maractus,Grass,Basic,1
-Mareanie,Darkness,Basic,1
+Mareanie,Darkness,Basic,2
 Mareep,Lightning,Basic,3
 Marill,Fairy,Basic,1
 Marill,Psychic,Basic,1
-Marill,Water,Basic,1
+Marill,Water,Basic,2
 Marshtomp,Water,Stage 1,1
 Maschiff,Darkness,Basic,2
 Masquerain,Grass,Stage 1,2
@@ -375,22 +388,24 @@ Mawile,Metal,Basic,4
 Medicham,Fighting,Stage 1,4
 Meditite,Psychic,Basic,1
 Meditite,Fighting,Basic,1
-Meltan,Metal,Basic,2
+Meltan,Metal,Basic,3
 Meowth,Colorless,Basic,2
-Metang,Metal,Stage 1,4
+Metang,Metal,Stage 1,6
 Metapod,Grass,Stage 1,1
 Mienfoo,Fighting,Basic,2
 Mienshao,Fighting,Stage 1,2
-Mightyena,Darkness,Stage 1,1
-Miltank,Colorless,Basic,1
+Mightyena,Darkness,Stage 1,3
+Milcery,Psychic,Basic,1
+Miltank,Colorless,Basic,2
 Mimikyu,Psychic,Basic,3
 Minior,Fighting,Basic,1
+Minun,Lightning,Basic,1
 Misdreavus,Psychic,Basic,1
 Mismagius,Psychic,Stage 1,2
 Monferno,Fire,Stage 1,1
 Morelull,Grass,Basic,1
 Morgrem,Darkness,Stage 1,1
-Morpeko,Lightning,Basic,3
+Morpeko,Lightning,Basic,4
 Morpeko,Darkness,Basic,3
 Mow Rotom,Grass,Basic,1
 Mr. Mime,Psychic,Basic,1
@@ -398,21 +413,21 @@ Mudbray,Fighting,Basic,1
 Mudsdale,Fighting,Stage 1,1
 Muk,Darkness,Stage 1,1
 Murkrow,Darkness,Basic,4
-Nacli,Fighting,Basic,4
+Nacli,Fighting,Basic,5
 Naclstack,Fighting,Stage 1,3
 Natu,Psychic,Basic,3
-Nickit,Darkness,Basic,1
+Nickit,Darkness,Basic,2
 Nidoran male,Darkness,Basic,1
-Ninetales,Fire,Stage 1,1
+Ninetales,Fire,Stage 1,2
 Noctowl,Colorless,Stage 1,3
 Noibat,Dragon,Basic,2
 Noivern,Dragon,Stage 1,1
 Nosepass,Fighting,Basic,2
-Numel,Fire,Basic,4
+Numel,Fire,Basic,5
 Nuzleaf,Grass,Stage 1,2
 Nymble,Grass,Basic,6
 Octillery,Water,Stage 1,1
-Oddish,Grass,Basic,5
+Oddish,Grass,Basic,6
 Oinkologne,Colorless,Stage 1,4
 Omanyte,Water,Restored,1
 Oranguru,Colorless,Basic,2
@@ -425,38 +440,41 @@ Palafin,Water,Stage 1,5
 Paldean Clodsire,Darkness,Stage 1,1
 Paldean Wooper,Darkness,Basic,3
 Palossand,Fighting,Stage 1,1
+Palpitoad,Water,Stage 1,1
 Pancham,Fighting,Basic,4
 Pangoro,Darkness,Stage 1,1
 Panpour,Water,Basic,4
 Pansage,Grass,Basic,3
-Pansear,Fire,Basic,2
+Pansear,Fire,Basic,3
 Paras,Grass,Basic,3
 Parasect,Grass,Stage 1,2
 Passimian,Fighting,Basic,1
 Pawmi,Lightning,Basic,3
 Pawmo,Lightning,Stage 1,1
-Pawniard,Metal,Basic,3
+Pawniard,Metal,Basic,4
 Pelipper,Water,Stage 1,2
 Petilil,Grass,Basic,2
 Phanpy,Fighting,Basic,2
 Phantump,Grass,Basic,4
+Pidgeot,Colorless,Stage 2,1
 Pidgey,Colorless,Basic,3
 Pidove,Colorless,Basic,4
 Pikachu,Lightning,Basic,10
 Pincurchin,Lightning,Basic,2
 Pineco,Grass,Basic,3
-Plusle,Lightning,Basic,1
+Plusle,Lightning,Basic,2
 Poliwag,Water,Basic,3
 Poliwhirl,Water,Stage 1,4
 Poltchageist,Grass,Basic,1
 Polteageist,Psychic,Stage 1,1
 Ponyta,Fire,Basic,2
+Poochyena,Darkness,Basic,1
 Porygon,Colorless,Basic,4
 Porygon2,Colorless,Stage 1,1
 Porygon-Z,Colorless,Stage 2,1
-Primeape,Fighting,Stage 1,3
+Primeape,Fighting,Stage 1,4
 Prinplup,Water,Stage 1,1
-Probopass,Metal,Stage 1,2
+Probopass,Metal,Stage 1,3
 Psyduck,Water,Basic,1
 Pumpkaboo,Psychic,Basic,1
 Pupitar,Fighting,Stage 1,2
@@ -464,22 +482,23 @@ Purrloin,Darkness,Basic,2
 Pyroar,Fire,Stage 1,1
 Quaquaval,Water,Stage 2,1
 Quaxly,Water,Basic,2
-Quaxwell,Water,Stage 1,1
+Quaxwell,Water,Stage 1,2
 Raichu,Lightning,Stage 1,2
 Ralts,Fairy,Basic,1
-Ralts,Psychic,Basic,10
+Ralts,Psychic,Basic,12
 Rapidash,Fire,Stage 1,3
-Raticate,Colorless,Stage 1,1
-Rattata,Colorless,Basic,2
+Raticate,Colorless,Stage 1,2
+Rattata,Colorless,Basic,3
 Regieleki,Lightning,Basic,1
-Relicanth,Water,Basic,4
+Relicanth,Water,Basic,5
 Rellor,Grass,Basic,1
 Remoraid,Water,Basic,3
 Reshiram,Fire,Basic,1
 Rhydon,Fighting,Stage 1,1
 Rhyhorn,Fighting,Basic,2
+Rillaboom,Grass,Stage 2,1
 Riolu,Fighting,Basic,1
-Rockruff,Fighting,Basic,4
+Rockruff,Fighting,Basic,5
 Roggenrola,Fighting,Basic,2
 Rolycoly,Fighting,Basic,3
 Roserade,Grass,Stage 1,1
@@ -488,39 +507,42 @@ Rufflet,Colorless,Basic,2
 Sableye,Darkness,Basic,4
 Salandit,Fire,Basic,2
 Salazzle,Fire,Stage 1,1
-Salazzle,Darkness,Stage 1,1
+Salazzle,Darkness,Stage 1,2
 Samurott,Water,Stage 2,1
 Sandaconda,Fighting,Stage 1,2
 Sandile,Darkness,Basic,1
 Sandile,Fighting,Basic,3
-Sandshrew,Fighting,Basic,2
+Sandshrew,Fighting,Basic,3
 Sandslash,Fighting,Stage 1,1
 Sandy Shocks,Fighting,Basic,4
 Sandygast,Fighting,Basic,4
 Sawk,Fighting,Basic,1
 Sawsbuck,Grass,Stage 1,2
 Scatterbug,Grass,Basic,1
+Scolipede,Darkness,Stage 2,1
 Scorbunny,Fire,Basic,1
 Scovillain,Grass,Stage 1,4
 Scrafty,Darkness,Stage 1,1
 Scraggy,Darkness,Basic,3
 Scream Tail,Psychic,Basic,3
-Scyther,Grass,Basic,4
+Scyther,Grass,Basic,5
+Seaking,Water,Stage 1,1
 Sealeo,Water,Stage 1,1
 Seedot,Grass,Basic,4
-Seel,Water,Basic,2
+Seel,Water,Basic,3
 Seviper,Darkness,Basic,3
 Sewaddle,Grass,Basic,2
 Shaymin,Grass,Basic,1
 Shellos,Water,Basic,3
 Shelmet,Grass,Basic,1
+Shieldon,Metal,Stage 1,1
 Shinx,Lightning,Basic,8
 Shroomish,Grass,Basic,1
 Shuckle,Grass,Basic,1
 Shuppet,Psychic,Basic,3
 Sigilyph,Psychic,Basic,1
-Simipour,Water,Stage 1,2
-Simisear,Fire,Stage 1,2
+Simipour,Water,Stage 1,3
+Simisear,Fire,Stage 1,3
 Sinistea,Psychic,Basic,2
 Sizzlipede,Fire,Basic,4
 Skarmory,Metal,Basic,2
@@ -552,7 +574,7 @@ Spinarak,Grass,Basic,4
 Spinda,Colorless,Basic,5
 Spiritomb,Darkness,Basic,2
 Spoink,Psychic,Basic,3
-Sprigatito,Grass,Basic,1
+Sprigatito,Grass,Basic,2
 Spritzee,Fairy,Basic,1
 Squirtle,Water,Basic,3
 Staravia,Colorless,Stage 1,2
@@ -562,26 +584,27 @@ Staryu,Water,Basic,1
 Steenee,Grass,Stage 1,3
 Stonjourner,Fighting,Basic,1
 Stoutland,Colorless,Stage 2,2
+Stoutland V,Colorless,Basic,1
 Stufful,Colorless,Basic,1
 Stufful,Fighting,Basic,3
 Stunfisk,Lightning,Basic,2
-Stunfisk,Fighting,Basic,2
+Stunfisk,Fighting,Basic,3
 Sudowoodo,Fighting,Basic,4
 Sunflora,Grass,Stage 1,1
 Surskit,Grass,Basic,2
 Swablu,Colorless,Basic,5
 Swirlix,Psychic,Basic,1
 Swoobat,Psychic,Stage 1,1
-Tadbulb,Lightning,Basic,6
+Tadbulb,Lightning,Basic,7
 Talonflame,Fire,Stage 2,2
 Talonflame,Colorless,Stage 2,2
-Tandemaus,Colorless,Basic,3
+Tandemaus,Colorless,Basic,5
 Tangela,Grass,Basic,5
 Tarountula,Grass,Basic,4
 Tatsugiri,Water,Basic,2
-Tauros,Colorless,Basic,3
+Tauros,Colorless,Basic,4
 Teddiursa,Colorless,Basic,2
-Tentacool,Water,Basic,5
+Tentacool,Water,Basic,6
 Terrakion,Fighting,Basic,1
 Thievul,Darkness,Stage 1,1
 Thwackey,Grass,Stage 1,3
@@ -593,29 +616,29 @@ Toedscool,Fighting,Basic,2
 Toedscruel,Grass,Stage 1,3
 Toedscruel,Fighting,Stage 1,2
 Togedemaru,Lightning,Basic,2
-Togedemaru,Metal,Basic,6
-Togekiss,Psychic,Stage 2,2
+Togedemaru,Metal,Basic,7
+Togekiss,Psychic,Stage 2,3
 Torkoal,Fire,Basic,4
 Torracat,Fire,Stage 1,2
 Torterra,Grass,Stage 2,1
-Totodile,Water,Basic,1
+Totodile,Water,Basic,2
 Toucannon,Colorless,Stage 2,1
 Toxapex,Darkness,Stage 1,1
 Toxel,Lightning,Basic,3
 Toxicroak,Darkness,Stage 1,1
 Toxicroak,Fighting,Stage 1,1
-Toxtricity,Lightning,Stage 1,4
+Toxtricity,Lightning,Stage 1,5
 Tranquill,Colorless,Stage 1,5
 Trapinch,Fighting,Basic,1
-Trevenant,Grass,Stage 1,4
+Trevenant,Grass,Stage 1,5
 Tropius,Grass,Basic,5
 Trubbish,Darkness,Basic,2
 Tsareena,Grass,Stage 2,1
 Turtonator,Fire,Basic,2
 Turtwig,Grass,Basic,1
 Tympole,Water,Basic,3
-Tynamo,Lightning,Basic,1
-Umbreon,Darkness,Stage 1,1
+Tynamo,Lightning,Basic,3
+Umbreon,Darkness,Stage 1,2
 Unfezant,Colorless,Stage 2,2
 Ursaring,Colorless,Stage 1,2
 Vanillish,Water,Stage 1,1
@@ -625,19 +648,19 @@ Varoom,Metal,Basic,3
 Veluza,Water,Basic,2
 Venipede,Darkness,Basic,1
 Venomoth,Grass,Stage 1,1
-Venonat,Grass,Basic,3
+Venonat,Grass,Basic,4
 Venusaur,Grass,Stage 2,1
 Vespiquen,Grass,Stage 1,4
 Victini,Fire,Basic,2
-Vigoroth,Colorless,Stage 1,3
+Vigoroth,Colorless,Stage 1,4
 Vikavolt,Lightning,Stage 2,2
 Vileplume,Grass,Stage 2,2
 Virizion,Grass,Basic,1
 Vivillon,Grass,Stage 2,1
 Volcanion,Fire,Basic,1
-Voltorb,Lightning,Basic,3
+Voltorb,Lightning,Basic,4
 Vullaby,Darkness,Basic,3
-Vulpix,Fire,Basic,3
+Vulpix,Fire,Basic,5
 Wailmer,Water,Basic,7
 Wailord,Water,Stage 1,3
 Wartortle,Water,Stage 1,1
@@ -648,11 +671,11 @@ Whimsicott,Psychic,Stage 1,1
 Whiscash,Fighting,Stage 1,1
 Wiglett,Water,Basic,2
 Wimpod,Grass,Basic,1
-Wimpod,Water,Basic,3
+Wimpod,Water,Basic,4
 Wingull,Water,Basic,3
 Wishiwashi,Water,Basic,2
 Wobbuffet,Psychic,Basic,1
-Wo-Chien,Grass,Basic,1
+Wo-Chien,Grass,Basic,2
 Woobat,Psychic,Basic,2
 Wooloo,Colorless,Basic,2
 Wooper,Fighting,Basic,2
@@ -665,10 +688,13 @@ Yanma,Grass,Basic,1
 Yanmega,Grass,Stage 1,4
 Yungoos,Colorless,Basic,2
 Zacian,Metal,Basic,1
+Zamazenta V,Fighting,Basic,1
 Zangoose,Colorless,Basic,3
 Zekrom,Lightning,Basic,1
+Zeraora,Lightning,Basic,1
 Zoroark,Darkness,Stage 1,1
-Zorua,Darkness,Basic,3
+Zorua,Darkness,Basic,4
 Zubat,Psychic,Basic,1
 Zubat,Darkness,Basic,1
 Zygarde,Fighting,Basic,1
+Yveltal,Darkness,Basic,1
